@@ -4,36 +4,117 @@
         <title>Kyle Coon</title>
     </head>
     <style>
-        h1::before {  
-            transform: scaleX(0);
-            transform-origin: bottom right;
-        }
+* {
+  box-sizing: border-box;
+}
+h1 {
+  font-weight: normal;
+  font-size:70px;
+  position: absolute;
+  top:11%;
+  left:31%;
+  font-family:'Tahome';
+}
+h2 {
+  font-weight: normal;
+  font-size:40px;
+  position: absolute;
+  top:30%;
+  font-family:'Arial Narrow';
+  color:whitesmoke;
+}
+html, body {
+  background: linear-gradient(135deg, rgb(10, 88, 117) 0%, rgb(71, 84, 255) 100%);
+}
 
-        h1:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-        }
+.container {
+  box-sizing: border-box;
+  width: 520px;
+  height:auto;
+  color: whitesmoke;
+  border-radius: 10px;
+  border: 5px solid whitesmoke;
+  position:absolute;
+  left:35.5%;
+  top:35%;
+  padding:20px;
+  
+}
 
-        h1::before {
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        inset: 0 0 0 0;
-        background: hsl(200 100% 80%);
-        z-index: -1;
-        transition: transform .3s ease;
-        }
+/* Scroller styling */
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 20em;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;
+  font-weight: bold;
+  
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  33.3% {
+    top: -1.2em;
+  }
+  66.6% {
+    top: -2.4em;
+  }
+}
 
-        h1 {
-        position: relative;
-        font-size: 5rem;
-        font-family: system-ui, sans-serif;
-        right:50%; top:25%
-        }
+.btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 27px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  border-radius: 5px;
+  font-family:"Verdana";
+  font-weight: bold;
+  color:darkblue;
+  width:480px;
+  position:relative;
+  right:7px;
+}
+
+.btn:hover {
+  background-color: #0c0048;
+  color: white;
+}
     </style>
     <body>
-        <h1>Welcome to kyle-jc.com</h1>
-        <p>What are you looking for?</p>
+        <h1>Welcome to kyle-jc.com, 
+            <!-- Scroller Start -->
+              
+          <div class="scroller" style="position:absolute">
+            <span style="font-family:Times;text-align:center;left: 10%">
+              &lt;employers&gt;<br/>
+              &lt;friends&gt;<br/>
+              &lt;fans&gt;<br/>
+            </span>
+          </div>
+              
+            <!-- Scroller End -->
+        </h1>
+        <div class="container">
+          <p style = "position:relative;text-align:center;font-family:Courier;font-size:35px;top:-7px">What are you here for?</p>
+          <a href="/cs/"><button class="btn">COMPUTER SCIENCE STUFF</button></a>
+          <br>
+          <br>
+          <a href="/film/"><button class="btn">FILM STUFF</button></a>
+          <br>
+          <br>
+          <a href="/both/"><button class="btn">BOTH!</button></a>         
+          <br>
+      </div>
     </body>
 </html>
