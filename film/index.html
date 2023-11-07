@@ -9,6 +9,7 @@
         top: 0;
         background-color: rgb(194, 102, 60);
         overflow: hidden;
+        max-height: 48px;
       }
 
       /* Style the links inside the navigation bar */
@@ -33,12 +34,44 @@
         background-color: rgb(85, 85, 85);
         color: white;
       }
+
+      .topnav c {
+        float: right;
+        color: #000000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family:"Verdana";
+        display: block;
+      }
+
+      .topnav c.split {
+        float: right;
+        color: rgb(0, 0, 0);
+        top: -5px;
+      }
+
+      .phonepic {
+        top:8px;
+        right:355px;
+        height: 30px;
+        position: absolute;
+      }
+      .emailpic {
+        top:11px;
+        right:202px;
+        height: 25px;
+        position: absolute;
+      }
+
     </style>
     <body>
       <div class="topnav a">
         <a href="/cs/">Computer Science</a>
         <a class="active" href="/film/">Film</a>
         <a href="/both/">Both</a>
+        <c class="c split"><img class="phonepic" src="/images/telephone.png" alt="telephone">616-843-5946 &#8287;&#8287;&#8287;&#8287;&#8287;&#8287; <img class="emailpic" src="/images/mail.png" alt="email"> kylecoon@umich.edu</c>
       </div>
       <p>Hello film!</p>
       <br>
