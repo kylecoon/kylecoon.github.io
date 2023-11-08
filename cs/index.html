@@ -4,12 +4,18 @@
         <title>Kyle Coon</title>
     </head>
     <style>
+      html, body {
+        background: linear-gradient(135deg, rgb(197, 182, 147) 0%, rgb(255, 255, 255) 100%);
+        height:100%;
+      }
+
       .topnav {
         position: sticky;
         top: 0;
+        z-index: 99;
         background-color: rgb(194, 102, 60);
         overflow: hidden;
-        max-height: 48px;
+        width: 100%;
       }
 
       /* Style the links inside the navigation bar */
@@ -17,10 +23,10 @@
         float: left;
         color: #f2f2f2;
         text-align: center;
-        padding: 14px 16px;
+        padding: 0.6vw 0.8vw;
         text-decoration: none;
-        font-size: 17px;
-        font-family:"Verdana";
+        font-size: 1.7vw;
+        font-family: Calibri;
       }
 
       /* Change the color of links on hover */
@@ -35,35 +41,128 @@
         color: white;
       }
 
-      .topnav c {
-        float: right;
-        color: #000000;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        font-family:"Verdana";
-        display: block;
-      }
-
-      .topnav c.split {
-        float: right;
-        color: rgb(0, 0, 0);
-        top: -5px;
-      }
-
       .phonepic {
-        top:8px;
-        right:355px;
-        height: 30px;
+        top:1.6vw;
+        right:28vw;
+        height: 2vw;
         position: absolute;
+        transform: translate(-50%, -50%);
       }
       .emailpic {
-        top:11px;
-        right:202px;
-        height: 25px;
+        top:1.6vw;
+        right:15.3vw;
+        height: 2vw;
         position: absolute;
+        transform: translate(-50%, -50%);
       }
+      
+      .kylecoon {
+        position: absolute;
+        color: #f2f2f2;
+        padding: 0.6vw 0.8vw;
+        text-decoration: none;
+        font-size: 1.7vw;
+        font-family: Calibri;
+        left: 50%;
+        top: 1.6vw;
+        transform: translate(-50%, -50%);
+      }
+
+      .contactinfo {
+        position: absolute;
+        color: #f2f2f2;
+        text-align: right;
+        padding: 0.6vw 0.8vw;
+        text-decoration: none;
+        font-size: 1.7vw;
+        font-family: Calibri;
+        right: 0px;
+      }
+
+      .left_container {
+        box-sizing: border-box;
+        width: 60vw;
+        height:auto;
+        background-color: rgb(255, 173, 122);
+        position:relative;
+        left:0;
+        padding:20px;
+        
+      }
+
+      .left_container_label {
+        box-sizing: border-box;
+        width: 64vw;
+        height:max-content;
+        background-color: rgb(93, 130, 186);
+        position:relative;
+        left:3vw;
+        top:-1vw;
+        border-radius: 10px;
+      }
+
+      .left_container_shadow {
+        box-sizing: border-box;
+        width: 66vw;
+        height:max-content;
+        background-color: rgb(65, 65, 65);
+        position:absolute;
+        left:-3vw;
+        border-radius: 10px;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+      }
+
+      .right_container {
+        box-sizing: border-box;
+        width: 60vw;
+        height:auto;
+        background-color: rgb(255, 173, 122);
+        position:relative;
+        right:-4vw;
+        padding:20px;
+        
+      }
+
+      .right_container_label {
+        box-sizing: border-box;
+        width: 64vw;
+        height:max-content;
+        background-color: rgb(93, 130, 186);
+        position:relative;
+        right:-1vw;
+        top:-1vw;
+        border-radius: 10px;
+      }
+
+      .right_container_shadow {
+        box-sizing: border-box;
+        width: 66vw;
+        height:max-content;
+        background-color: rgb(65, 65, 65);
+        position:absolute;
+        right:-1vw;
+        border-radius: 10px;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+      }
+
+      .left_label_text {
+        font-size: 2.5vw;
+        z-index: 98;
+        right: 0;
+        transform: rotate(90deg);
+        position: absolute;
+        right: -7.1vw;
+        top: 42%;
+      }
+
+      .information {
+        font-size: 1.2vw;
+        font-family: Tahoma;
+      }
+
+
 
     </style>
     <body>
@@ -71,60 +170,94 @@
         <a class="active" href="/cs/">Computer Science</a>
         <a href="/film/">Film</a>
         <a href="/both/">Both</a>
-        <c class="c split"><img class="phonepic" src="/images/telephone.png" alt="telephone">616-843-5946 &#8287;&#8287;&#8287;&#8287;&#8287;&#8287; <img class="emailpic" src="/images/mail.png" alt="email"> kylecoon@umich.edu</c>
+        <div class="kylecoon">KYLE J. COON</div>
+        <div class="contactinfo"><img class="phonepic" src="/images/phone.png" alt="telephone">616-843-5946 &#8287;&#8287;&#8287;&#8287;&#8287;&#8287; <img class="emailpic" src="/images/email.png" alt="email"> kylecoon@umich.edu</div>
       </div>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
+      <div class="left_container_shadow">
+        <div class="left_container_label">
+          <div class="left_container">
+            <div class="left_label_text">Education</div>
+            <div class="information">
+              <b><u>School:</u></b> University of Michigan
+              <p><b><u>Graduation Date:</u></b> April 2024</p>
+              <p><b><u>Degrees:</u></b> B.S. Computer Science; B.A. Film, Television, and Media</p>
+              <p><b><u>GPA:</u></b> 3.629</p>
+              <p><b><u>Relevant Coursework:</u></b></p>
+              <ul>
+                <li>EECS 485 - Web Systems ()</li>
+                <li>EECS 442 - Computer Vision</li>
+                <li>EECS 388 - Computer Security</li>
+                <li>EECS 370 - Computer Organization</li>
+                <li>EECS 281 - Data Structures and Alogrothms</li>
+                <li>STATS 250 - Statistics and Analysis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
       <br>
-      <p>Come back and look at this in liiiiike a week!</p>
       <br>
       <br>
-      <br>
-
+      <div class="right_container_shadow">
+        <div class="right_container_label">
+          <div class="right_container">
+            hmm
+            <br>
+            <br>
+            <br>
+            hmm
+            <br>
+            <br>
+            <br>
+            hmm
+            <br>
+            <br>
+            <br>
+            hmm
+            <br>
+            <br>
+            <br>
+            hmm
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
     </body>
 </html>
