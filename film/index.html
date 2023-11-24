@@ -17,7 +17,7 @@
         position: sticky;
         top: 0;
         z-index: 99;
-        background-color: rgb(194, 102, 60);
+        background: linear-gradient(90deg, rgb(0, 6, 171), rgb(0, 4, 111));
         overflow: hidden;
         width: 100%;
       }
@@ -31,18 +31,19 @@
         text-decoration: none;
         font-size: 1.7vw;
         font-family: Calibri;
+        transition: 0.2s;
       }
 
       /* Change the color of links on hover */
       .topnav a:hover {
-        background-color: #ddd;
+        background-color: rgb(158, 160, 206);
         color: black;
       }
 
       /* Add a color to the active/current link */
       .topnav a.active {
-        background-color: rgb(85, 85, 85);
-        color: white;
+        background-color: rgb(226, 223, 223);
+        color: rgb(0, 0, 0);
       }
 
       .phonepic {
@@ -178,7 +179,7 @@
 
     </style>
     <body>
-      <div class="topnav a">
+      <div class="topnav">
         <a href="/cs/">Computer Science</a>
         <a class="active" href="/film/">Film</a>
         <a href="/both/">Both</a>
