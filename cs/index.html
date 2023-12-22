@@ -233,7 +233,7 @@
         height: 0.2vw;
         width: 24vw;
         left: 5vw;
-        top: -14vw;
+        top: -14.7vw;
       }
 
       .sticky1 {
@@ -332,6 +332,57 @@
         padding-top: 2vw;
       }
 
+      .projects {
+        background-color: rgb(223, 223, 223);
+        min-height: 500px;
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        padding-top: 2vw;
+        text-align: center;
+      }
+
+      .projectgrid {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        padding-top: 2vw;
+        column-gap: 5vw;
+        row-gap: 5vw;
+        justify-content: center;
+      }
+
+      .projectitem {
+        background-color: #002d61;
+        border-radius: 1vw;
+        color: white;
+      }
+
+      .projectheader {
+        font-size: 2.5vw;
+        padding: 1vw;
+      }
+
+      .projectgif {
+        width: 25vw;
+        justify-content: center;
+        border-radius: 1vw;
+        border: 5px solid black;
+      }
+
+      .projectsummary {
+        color: rgb(223, 223, 223);
+        font-size: 1vw;
+        padding-left: 0.7vw;
+        padding-right: 0.7vw;
+        padding-bottom: 0.8vw;
+      }
+
+      .projectcontent {
+        font-size: 1.5vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 2vw;
+      }
+
     </style>
     <body>
       <div class="topnav">
@@ -347,9 +398,9 @@
             About Me.
           </div>
           <div class="aboutmetext">
-            Hello! My name is Kyle Coon and I'm a programmer from Michigan with a B.S. in Computer Science and a second degreee in Film, Television, and Media. 
+            Hello! My name is Kyle Coon and I'm a programmer from Michigan with a B.S. in Computer Science and a second degree in Film, Television, and Media. 
           </div>
-          <a href="/images/phone.png" download="resume.png" class="resumebutton">Download Resume</a>
+          <a href="/images/phone.png" class="resumebutton" target="_blank">View Resume</a>
         </div>
         <div class="aboutmeright">
           <div class="aboutmecover"></div>
@@ -368,16 +419,16 @@
 
               <b>Graduation</b> May 2024<br><br>
 
-              <b>GPA:</b> 3.629<br><br>
+              <b>GPA:</b> 3.651<br><br>
 
               <b>Degrees:</b> B.S. Computer Science, B.S. Film, Television, and Media<br><br>
             </div>
           </div>
           <div class="skills">
             <div class="skillsheader">Skills</div>
-            <div class="skillssection"><b>Software Engineering<br></b><br>C++<br>Python<br>Object-Oriented Programming<br>Git</div>
-            <div class="skillssection"><b>Web Development<br><br></b>JavaScript<br>SQL<br>React<br>AWS</div>
-            <div class="skillssection"><b>Computer Security<br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
+            <div class="skillssection"><b><u>Software Engineering</u><br></b><br>C++<br>Python<br>Java<br>Git</div>
+            <div class="skillssection"><b><u>Web Development</u><br><br></b>JavaScript<br>SQL<br>React<br>AWS</div>
+            <div class="skillssection"><b><u>Computer Security</u><br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
           </div>
         </div>
         <div class="educationright">
@@ -389,7 +440,37 @@
           <div class="sticky3">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of machine learning and<br>&nbsp;deep learning</div>
           <div class="sticky4"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br><br>&nbsp;*Winter 2024 Enrollment</div>
           <div class="sticky5"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computergames as well as<br>&nbsp;&nbsp;understanding of the<br>&nbsp;&nbsp;video game industry<br><br>&nbsp;*Winter 2024 Enrollment</div>
+        </div>
+      </div>
+      <div class="projects">
+        Projects
+        <div class="projectgrid">
+          <div class="projectitem">
+            <div class="projectheader">Chess Digitizer</div>
+            <img src="/images/chess.gif" class="projectgif">
+            <div class="projectsummary">
+              <i>Conversion of image to digital representation</i>
+            </div>
+            <div class="projectcontent">
+              Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved through a corner-recognition algorithm and convolution neural network.
+              <br>
+              <br>
+              Check out my report on the project <b><a href="/images/ChessReport.pdf" target="_blank" style="color:inherit;">HERE!</a></b>
+              <br>
+              <br>
+              Check out my code for the project <b><a href="https://github.com/kylecoon/chess" target="_blank" style="color:inherit;">HERE!</a></b>
 
+            </div>
+          </div>
+          <div class="projectitem">
+            <div class="projectheader">Terminle</div>
+          </div>
+          <div class="projectitem">
+            <div class="projectheader">C.R.U.D. Website</div>
+          </div>
+          <div class="projectitem">
+            <div class="projectheader">Scalable Search Engine</div>
+          </div>
         </div>
       </div>
     </body>
