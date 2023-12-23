@@ -5,8 +5,6 @@
     </head>
     <style>
       html, body {
-        height:100%;
-        width:100%;
         margin: 0;
         padding: 0;
       }
@@ -172,6 +170,7 @@
         border-radius: 2vw;
         margin-left: 5vw;
         margin-top: 5vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
       }
 
       .educationright {
@@ -336,24 +335,26 @@
         background-color: rgb(223, 223, 223);
         min-height: 500px;
         font-family: 'Gill Sans';
-        font-size: 4vw;
+        font-size: 3vw;
         padding-top: 2vw;
         text-align: center;
       }
 
       .projectgrid {
         display: grid;
-        grid-template-columns: 30vw 30vw;
+        grid-template-columns: 30vw 30vw 30vw;
         padding-top: 2vw;
-        column-gap: 5vw;
+        column-gap: 2.5vw;
         row-gap: 5vw;
         justify-content: center;
+        padding-bottom: 2vw;
       }
 
       .projectitem {
         background-color: #002d61;
         border-radius: 1vw;
         color: white;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
       }
 
       .projectheader {
@@ -377,7 +378,7 @@
       }
 
       .projectcontent {
-        font-size: 1.5vw;
+        font-size: 1.4vw;
         padding-left: 2vw;
         padding-right: 2vw;
         padding-bottom: 2vw;
@@ -452,24 +453,79 @@
               <i>Conversion of image to digital representation</i>
             </div>
             <div class="projectcontent">
-              Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved through a corner-recognition algorithm and convolution neural network.
+              Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved with a corner-recognition algorithm and neural network written in Python.
               <br>
               <br>
               Check out my report on the project <b><a href="/images/ChessReport.pdf" target="_blank" style="color:inherit;">HERE!</a></b>
               <br>
               <br>
               Check out my code for the project <b><a href="https://github.com/kylecoon/chess" target="_blank" style="color:inherit;">HERE!</a></b>
-
             </div>
           </div>
           <div class="projectitem">
             <div class="projectheader">Terminle</div>
+            <img src="/images/terminle.gif" class="projectgif">
+            <div class="projectsummary">
+              <i>Gameplay with randomly generated word</i>
+            </div>
+            <div class="projectcontent">
+              Recreation of the popular web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++. 
+              <br>
+              <br>
+              Check out my code for the project <b><a href="https://github.com/kylecoon/terminle" target="_blank" style="color:inherit;">HERE!</a></b>
+            </div>
           </div>
           <div class="projectitem">
             <div class="projectheader">C.R.U.D. Website</div>
+            <img src="/images/kylestagram.gif" class="projectgif">
+            <div class="projectsummary">
+              <i>Account creation and content browsing</i>
+            </div>
+            <div class="projectcontent">
+              Clone of an Instagram-like Create, Read, Update, and Delete social media website. Includes security-conscious account creation, home feed, explore page, followers, likes, and comments. Created with HTML, CSS, JavaScript, React, and SQL framework that prioritizes functionality over aesthetics. 
+              <br>
+              <br>
+              Code available upon request. 
+            </div>
           </div>
           <div class="projectitem">
             <div class="projectheader">Scalable Search Engine</div>
+            <img src="/images/bingle.gif" class="projectgif">
+            <div class="projectsummary">
+              <i>Search query and results</i>
+            </div>
+            <div class="projectcontent">
+              Search engine similar to Google/Bing that ranks page results with an inverted index that was constructed by web-crawling about 3,000 webpages. The inverted index was made with a MapReduce program written in Python and the website was constructed with standard web app framework.
+              <br>
+              <br>
+              Code available upon request. 
+            </div>
+          </div>
+          <div class="projectitem">
+            <div class="projectheader">Distributed Word Count</div>
+            <img src="/images/wordcount.gif" class="projectgif">
+            <div class="projectsummary">
+              <i>Partitioned output after execution on 8 documents</i>
+            </div>
+            <div class="projectcontent">
+              Distributed system created to execute a simple word count Map Reduce program with one manager and a variable amount of workers. The distributed system utilizes heartbeat tracking between workers and a manager to ensure accuracy through a fault-tolerant design. 
+              <br>
+              <br>
+              Code available upon request. 
+            </div>
+          </div>
+          <div class="projectitem">
+            <div class="projectheader">This Website!</div>
+            <img src="/images/website.png" class="projectgif">
+            <div class="projectsummary">
+              <i>Landing page for this website</i>
+            </div>
+            <div class="projectcontent">
+              Instead of using a website builder, this entire website was designed and hand-written by me. This was the first website I made with a focus on aesthetics, and while it certainly has a lot of room for improvement, I was able to teach myself many important principals of visually appealing web design.
+              <br>
+              <br>
+              Check out my "code" for the project <b><a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="color:inherit;">HERE!</a></b>
+            </div>
           </div>
         </div>
       </div>
