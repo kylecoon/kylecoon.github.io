@@ -16,7 +16,7 @@
         position: sticky;
         top: 0;
         z-index: 99;
-        background: linear-gradient(90deg, rgb(0, 6, 171), rgb(0, 4, 111));
+        background: linear-gradient(90deg,#0056b8, #004492);
         overflow: hidden;
         width: 100%;
       }
@@ -333,21 +333,20 @@
 
       .projects {
         background-color: rgb(223, 223, 223);
-        min-height: 500px;
         font-family: 'Gill Sans';
-        font-size: 3vw;
+        font-size: 4vw;
         padding-top: 2vw;
         text-align: center;
       }
 
       .projectgrid {
         display: grid;
-        grid-template-columns: 30vw 30vw 30vw;
+        grid-template-columns: 40vw 40vw;
         padding-top: 2vw;
-        column-gap: 2.5vw;
+        column-gap: 7vw;
         row-gap: 5vw;
         justify-content: center;
-        padding-bottom: 2vw;
+        padding-bottom: 5vw;
       }
 
       .projectitem {
@@ -363,7 +362,7 @@
       }
 
       .projectgif {
-        width: 25vw;
+        width: 30vw;
         justify-content: center;
         border-radius: 1vw;
         border: 5px solid black;
@@ -379,10 +378,54 @@
 
       .projectcontent {
         font-size: 1.4vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
         padding-bottom: 2vw;
       }
+
+      .leadership {
+        background-color: #002d61;
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        padding: 2vw;
+        text-align: center;
+        color: white;
+      }
+
+      .leadershipcolumns {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 2vw;
+        column-gap: 2vw;
+      }
+
+      .leadershippic {
+        height: 30vw;
+        border-radius: 2vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+      }
+
+      .leadershipheader {
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+      }
+
+      .leadershiptitle {
+        font-family: 'Gill Sans';
+        font-size: 2.5vw;
+        text-align: center;
+        color: rgb(160, 160, 160);
+      }
+
+      .leadershipcontent {
+        font-family: 'Gill Sans';
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+      }
+
 
     </style>
     <body>
@@ -469,7 +512,7 @@
               <i>Gameplay with randomly generated word</i>
             </div>
             <div class="projectcontent">
-              Recreation of the popular web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++. 
+              Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++ with a text-coloring library. 
               <br>
               <br>
               Check out my code for the project <b><a href="https://github.com/kylecoon/terminle" target="_blank" style="color:inherit;">HERE!</a></b>
@@ -526,6 +569,25 @@
               <br>
               Check out my "code" for the project <b><a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="color:inherit;">HERE!</a></b>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="leadership">
+        Leadership Experience
+        <div class="leadershipcolumns">
+          <div>
+            <img src="/images/glee.jpg" class="leadershippic">
+            <br><br>
+            <div class="leadershipheader">The Friars</div>
+            <div class="leadershiptitle"><i>President</i></div>
+            <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
+          </div>
+          <div>
+            <div class="leadershipheader">University of Michigan Men's Glee Club</div>
+            <div class="leadershiptitle"><i>Vice President</i></div>
+            <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
+            <br>
+            <img src="/images/friars.jpg" class="leadershippic">
           </div>
         </div>
       </div>
