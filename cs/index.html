@@ -121,6 +121,16 @@
         background-color: rgb(223, 223, 223);
       }
 
+      @media (max-width: 550px) {
+        .educationgrid{
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          grid-template-areas: 
+          "educationleft",
+          "educationright";
+        }
+      }
+
       .educationleft {
         display: grid;
         grid-template-columns: 35vw auto;
@@ -143,6 +153,16 @@
         grid-template-columns: 13vw 13vw;
       }
 
+      @media (max-width: 550px) {
+        .educationright {
+          background-color: rgb(255, 255, 255);
+          height: auto;
+          display: grid;
+          grid-template-columns: 13vw 13vw;
+          justify-content: center;
+        }
+      }
+
       .educationheader {
         color: black;
         font-size: 3vw;
@@ -158,6 +178,15 @@
         position: relative;
         height: 0.2vw;
         width: 26vw;
+      }
+
+      @media (max-width: 550px) {
+        .educationline {
+          padding-left: 17vw;
+          position: relative;
+          height: 0.2vw;
+          width: 26vw;
+        }
       }
 
       .educationinfo {
@@ -279,6 +308,18 @@
         color: white;
       }
 
+      @media (max-width: 550px) {
+        .skills {
+          width: 100vw;
+          background-color: #002d61;
+          height: 15vw;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          color: white;
+          text-align: center;
+        }
+      }
+
       .skillsheader {
         padding-top: 5vw;
         padding-left: 2vw;
@@ -310,6 +351,18 @@
         row-gap: 5vw;
         justify-content: center;
         padding-bottom: 5vw;
+      }
+      
+      @media (max-width: 550px) {
+        .projectgrid {
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 5vw;
+          column-gap: 7vw;
+          row-gap: 5vw;
+          justify-content: center;
+          padding-bottom: 5vw;
+        }
       }
 
       .projectitem {
@@ -397,175 +450,190 @@
         text-align: center;
         font-family: 'Gill Sans';
         line-height: 2vw;
+        text-decoration: none;
       }
 
+      @media (max-content: 550px) {
+        .footer {
+          background-color: rgb(160, 160, 160);
+          font-size: 1.4vw;
+          padding: 2vw;
+          color: white;
+          text-align: center;
+          font-family: 'Gill Sans';
+          line-height: 2vw;
+          text-decoration: none;
+        }
+      }
 
     </style>
     <body>
-      <div class="topnav">
-        <a class="active" href="/cs/">Computer Science</a>
-        <a href="/film/">Film</a>
-        <a href="/both/">Both</a>
-      </div>
-      <div class="aboutmegrid">
-        <div class="aboutmeleft"> 
-          <div class="aboutmeheader">
-            About Me.
-          </div>
-          <div class="aboutmetext">
-            Hello! My name is Kyle Coon and I'm a programmer from Michigan with a B.S. in Computer Science and a second degree in Film, Television, and Media. 
-          </div>
-          <a href="/images/phone.png" class="resumebutton" target="_blank">View Resume</a>
+      <div class="container">
+        <div class="topnav">
+          <a class="active" href="/cs/">Computer Science</a>
+          <a href="/film/">Film</a>
+          <a href="/both/">Both</a>
         </div>
-        <div class="aboutmeright">
-          <div class="aboutmecover"></div>
+        <div class="aboutmegrid">
+          <div class="aboutmeleft"> 
+            <div class="aboutmeheader">
+              About Me.
+            </div>
+            <div class="aboutmetext">
+              Hello! My name is Kyle Coon and I'm a programmer from Michigan with a B.S. in Computer Science and a second degree in Film, Television, and Media. 
+            </div>
+            <a href="/images/phone.png" class="resumebutton" target="_blank">View Resume</a>
+          </div>
+          <div class="aboutmeright">
+            <div class="aboutmecover"></div>
+          </div>
         </div>
-      </div>
-      <div class="educationgrid">
-        <div class="educationleft">
-          <img class="uofm" src="/images/uofm.jpeg">
-          <div>
-            <div class="educationheader">Education</div>
-            <div><img class="educationline" src="/images/line.png"></div>
-            <div class="educationinfo">
-              <b>School:</b> University of Michigan -<br> 
-              College of Literature, Science,<br>
-              and the Arts<br><br>
+        <div class="educationgrid">
+          <div class="educationleft" id="educationleft">
+            <img class="uofm" src="/images/uofm.jpeg">
+            <div>
+              <div class="educationheader">Education</div>
+              <div><img class="educationline" src="/images/line.png"></div>
+              <div class="educationinfo">
+                <b>School:</b> University of Michigan -<br> 
+                College of Literature, Science,<br>
+                and the Arts<br><br>
 
-              <b>Graduation</b> May 2024<br><br>
+                <b>Graduation</b> May 2024<br><br>
 
-              <b>GPA:</b> 3.651<br><br>
+                <b>GPA:</b> 3.651<br><br>
 
-              <b>Degrees:</b> B.S. Computer Science, B.S. Film, Television, and Media<br><br>
+                <b>Degrees:</b> B.S. Computer Science, B.S. Film, Television, and Media<br><br>
+              </div>
+            </div>
+            <div class="skills">
+              <div class="skillsheader">Skills</div>
+              <div class="skillssection"><b><u>Software Engineering</u><br></b><br>C++<br>Python<br>Java<br>Git</div>
+              <div class="skillssection"><b><u>Web Development</u><br><br></b>JavaScript<br>SQL<br>React<br>AWS</div>
+              <div class="skillssection"><b><u>Computer Security</u><br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
             </div>
           </div>
-          <div class="skills">
-            <div class="skillsheader">Skills</div>
-            <div class="skillssection"><b><u>Software Engineering</u><br></b><br>C++<br>Python<br>Java<br>Git</div>
-            <div class="skillssection"><b><u>Web Development</u><br><br></b>JavaScript<br>SQL<br>React<br>AWS</div>
-            <div class="skillssection"><b><u>Computer Security</u><br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
-          </div>
-        </div>
-        <div class="educationright">
-          <div class="classesheader1"> Notable</div>
-          <div class="classesheader2"> Classes</div>
-          <div class="sticky1"><u>Web Systems:</u> Practical <br> implementations of both <br>front-end and back-<br>&nbsp;end web systems and <br>&nbsp;&nbsp;technologies</div>
-          <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Computer Security:</u><br>&nbsp;&nbsp;&nbsp;Assessement, prevention,<br>&nbsp;&nbsp;&nbsp;and exploitation of<br>&nbsp;&nbsp;&nbsp;modern web security<br>&nbsp;&nbsp;&nbsp;designs and their faults</div>
-          <div><img class="classesline" src="/images/line.png"></div>
-          <div class="sticky3">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of machine learning and<br>&nbsp;deep learning</div>
-          <div class="sticky4"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br><br>&nbsp;*Winter 2024 Enrollment</div>
-          <div class="sticky5"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computergames as well as<br>&nbsp;&nbsp;understanding of the<br>&nbsp;&nbsp;video game industry<br><br>&nbsp;*Winter 2024 Enrollment</div>
-        </div>
-      </div>
-      <div class="projects">
-        Projects
-        <div class="projectgrid">
-          <div class="projectitem">
-            <div class="projectheader">Chess Digitizer</div>
-            <img src="/images/chess.gif" class="projectgif">
-            <div class="projectsummary">
-              <i>Conversion of image to digital representation</i>
-            </div>
-            <div class="projectcontent">
-              Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved with a corner-recognition algorithm and neural network written in Python.
-              <br>
-              <br>
-              Check out my report on the project <b><a href="/images/ChessReport.pdf" target="_blank" style="color:inherit;">HERE!</a></b>
-              <br>
-              <br>
-              Check out my code for the project <b><a href="https://github.com/kylecoon/chess" target="_blank" style="color:inherit;">HERE!</a></b>
-            </div>
-          </div>
-          <div class="projectitem">
-            <div class="projectheader">Terminle</div>
-            <img src="/images/terminle.gif" class="projectgif">
-            <div class="projectsummary">
-              <i>Gameplay with randomly generated word</i>
-            </div>
-            <div class="projectcontent">
-              Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++ with a text-coloring library. 
-              <br>
-              <br>
-              Check out my code for the project <b><a href="https://github.com/kylecoon/terminle" target="_blank" style="color:inherit;">HERE!</a></b>
-            </div>
-          </div>
-          <div class="projectitem">
-            <div class="projectheader">C.R.U.D. Website</div>
-            <img src="/images/kylestagram.gif" class="projectgif">
-            <div class="projectsummary">
-              <i>Account creation and content browsing</i>
-            </div>
-            <div class="projectcontent">
-              Clone of an Instagram-like Create, Read, Update, and Delete social media website. Includes security-conscious account creation, home feed, explore page, followers, likes, and comments. Created with HTML, CSS, JavaScript, React, and SQL framework that prioritizes functionality over aesthetics. 
-              <br>
-              <br>
-              Code available upon request. 
-            </div>
-          </div>
-          <div class="projectitem">
-            <div class="projectheader">Scalable Search Engine</div>
-            <img src="/images/bingle.gif" class="projectgif">
-            <div class="projectsummary">
-              <i>Search query and results</i>
-            </div>
-            <div class="projectcontent">
-              Search engine similar to Google/Bing that ranks page results with an inverted index that was constructed by web-crawling about 3,000 webpages. The inverted index was made with a MapReduce program written in Python and the website was constructed with standard web app framework.
-              <br>
-              <br>
-              Code available upon request. 
-            </div>
-          </div>
-          <div class="projectitem">
-            <div class="projectheader">Distributed Word Count</div>
-            <img src="/images/word.gif" class="projectgif">
-            <div class="projectsummary">
-              <i>Partitioned output after execution on 8 documents</i>
-            </div>
-            <div class="projectcontent">
-              Distributed system created to execute a simple word count Map Reduce program with one manager and a variable amount of workers. The distributed system utilizes heartbeat tracking between workers and a manager to ensure accuracy through a fault-tolerant design. 
-              <br>
-              <br>
-              Code available upon request. 
-            </div>
-          </div>
-          <div class="projectitem">
-            <div class="projectheader">This Website!</div>
-            <img src="/images/website.png" class="projectgif">
-            <div class="projectsummary">
-              <i>Landing page for this website</i>
-            </div>
-            <div class="projectcontent">
-              Instead of using a website builder, this entire website was designed and hand-written by me. This was the first website I made with a focus on aesthetics, and while it certainly has a lot of room for improvement, I was able to teach myself many important principals of visually appealing web design.
-              <br>
-              <br>
-              Check out my "code" for the project <b><a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="color:inherit;">HERE!</a></b>
-            </div>
+          <div class="educationright" id="educationleft">
+            <div class="classesheader1"> Notable</div>
+            <div class="classesheader2"> Classes</div>
+            <div class="sticky1"><u>Web Systems:</u> Practical <br> implementations of both <br>front-end and back-<br>&nbsp;end web systems and <br>&nbsp;&nbsp;technologies</div>
+            <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Computer Security:</u><br>&nbsp;&nbsp;&nbsp;Assessement, prevention,<br>&nbsp;&nbsp;&nbsp;and exploitation of<br>&nbsp;&nbsp;&nbsp;modern web security<br>&nbsp;&nbsp;&nbsp;designs and their faults</div>
+            <div><img class="classesline" src="/images/line.png"></div>
+            <div class="sticky3">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of machine learning and<br>&nbsp;deep learning</div>
+            <div class="sticky4"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br><br>&nbsp;*Winter 2024 Enrollment</div>
+            <div class="sticky5"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computergames as well as<br>&nbsp;&nbsp;understanding of the<br>&nbsp;&nbsp;video game industry<br><br>&nbsp;*Winter 2024 Enrollment</div>
           </div>
         </div>
-      </div>
-      <div class="leadership">
-        Leadership Experience
-        <div class="leadershipcolumns">
-          <div>
-            <img src="/images/glee.jpg" class="leadershippic">
-            <br><br>
-            <div class="leadershipheader">The Friars</div>
-            <div class="leadershiptitle"><i>President</i></div>
-            <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
-          </div>
-          <div>
-            <div class="leadershipheader">University of Michigan Men's Glee Club</div>
-            <div class="leadershiptitle"><i>Vice President</i></div>
-            <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
-            <br>
-            <img src="/images/friars.jpg" class="leadershippic">
+        <div class="projects">
+          Projects
+          <div class="projectgrid">
+            <div class="projectitem">
+              <div class="projectheader">Chess Digitizer</div>
+              <img src="/images/chess.gif" class="projectgif">
+              <div class="projectsummary">
+                <i>Conversion of image to digital representation</i>
+              </div>
+              <div class="projectcontent">
+                Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved with a corner-recognition algorithm and neural network written in Python.
+                <br>
+                <br>
+                Check out my report on the project <b><a href="/images/ChessReport.pdf" target="_blank" style="color:inherit;">HERE!</a></b>
+                <br>
+                <br>
+                Check out my code for the project <b><a href="https://github.com/kylecoon/chess" target="_blank" style="color:inherit;">HERE!</a></b>
+              </div>
+            </div>
+            <div class="projectitem">
+              <div class="projectheader">Terminle</div>
+              <img src="/images/terminle.gif" class="projectgif">
+              <div class="projectsummary">
+                <i>Gameplay with randomly generated word</i>
+              </div>
+              <div class="projectcontent">
+                Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++ with a text-coloring library. 
+                <br>
+                <br>
+                Check out my code for the project <b><a href="https://github.com/kylecoon/terminle" target="_blank" style="color:inherit;">HERE!</a></b>
+              </div>
+            </div>
+            <div class="projectitem">
+              <div class="projectheader">C.R.U.D. Website</div>
+              <img src="/images/kylestagram.gif" class="projectgif">
+              <div class="projectsummary">
+                <i>Account creation and content browsing</i>
+              </div>
+              <div class="projectcontent">
+                Clone of an Instagram-like Create, Read, Update, and Delete social media website. Includes security-conscious account creation, home feed, explore page, followers, likes, and comments. Created with HTML, CSS, JavaScript, React, and SQL framework that prioritizes functionality over aesthetics. 
+                <br>
+                <br>
+                Code available upon request. 
+              </div>
+            </div>
+            <div class="projectitem">
+              <div class="projectheader">Scalable Search Engine</div>
+              <img src="/images/bingle.gif" class="projectgif">
+              <div class="projectsummary">
+                <i>Search query and results</i>
+              </div>
+              <div class="projectcontent">
+                Search engine similar to Google/Bing that ranks page results with an inverted index that was constructed by web-crawling about 3,000 webpages. The inverted index was made with a MapReduce program written in Python and the website was constructed with standard web app framework.
+                <br>
+                <br>
+                Code available upon request. 
+              </div>
+            </div>
+            <div class="projectitem">
+              <div class="projectheader">Distributed Word Count</div>
+              <img src="/images/word.gif" class="projectgif">
+              <div class="projectsummary">
+                <i>Partitioned output after execution on 8 documents</i>
+              </div>
+              <div class="projectcontent">
+                Distributed system created to execute a simple word count Map Reduce program with one manager and a variable amount of workers. The distributed system utilizes heartbeat tracking between workers and a manager to ensure accuracy through a fault-tolerant design. 
+                <br>
+                <br>
+                Code available upon request. 
+              </div>
+            </div>
+            <div class="projectitem">
+              <div class="projectheader">This Website!</div>
+              <img src="/images/website.png" class="projectgif">
+              <div class="projectsummary">
+                <i>Landing page for this website</i>
+              </div>
+              <div class="projectcontent">
+                Instead of using a website builder, this entire website was designed and hand-written by me. This was the first website I made with a focus on aesthetics, and while it certainly has a lot of room for improvement, I was able to teach myself many important principals of visually appealing web design.
+                <br>
+                <br>
+                Check out my "code" for the project <b><a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="color:inherit;">HERE!</a></b>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="footer">
-        2023 by Kyle J. Coon<br>
-        kylecoon@umich.edu<br>
-        616-843-5946
+        <div class="leadership">
+          Leadership Experience
+          <div class="leadershipcolumns">
+            <div>
+              <img src="/images/glee.jpg" class="leadershippic">
+              <br><br>
+              <div class="leadershipheader">The Friars</div>
+              <div class="leadershiptitle"><i>President</i></div>
+              <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
+            </div>
+            <div>
+              <div class="leadershipheader">University of Michigan Men's Glee Club</div>
+              <div class="leadershiptitle"><i>Vice President</i></div>
+              <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
+              <br>
+              <img src="/images/friars.jpg" class="leadershippic">
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          2023 by Kyle J. Coon<br>
+          kylecoon@umich.edu<br>
+          616-843-5946
+        </div>
       </div>
     </body>
 </html>
