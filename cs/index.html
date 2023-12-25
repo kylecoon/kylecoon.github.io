@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-      <meta name="viewport" content="width=500, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Kyle Coon</title>
     </head>
     <style>
@@ -35,6 +35,15 @@
         transition: 0.2s;
       }
 
+      @media (max-width: 45em) {
+        .topnav {
+          grid-template-columns: 150px 50px 50px;
+        }
+        .topnav a {
+          font-size: 16px;
+        }
+      }
+
       /* Change the color of links on hover */
       .topnav a:hover {
         background-color: rgb(158, 160, 206);
@@ -49,33 +58,34 @@
 
       .aboutmegrid {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25vw;
         position: relative;
-        width: 100%;
-        height: 30vw;
+      }
+
+      @media (max-width: 45em) {
+        .aboutmegrid {
+          grid-template-rows: 47vw;
+        }
       }
 
       .aboutmeleft {
         background-color: rgb(79, 79, 79);
-        display: inline-grid;
-        width: 100%;
       }
       
       .aboutmecover {
         background: linear-gradient(90deg, rgba(79, 79, 79, 1), rgba(79, 79, 79, 0));
-        display: inline-grid;
-        width: 100%;
       }
 
       .aboutmeright {
-        background-image: url('/images/me.jpg');
+        background-image: url('/images/me.webp');
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-grid;
       }
 
       .aboutmeheader {
-        padding-top: 5vw;
+        padding-top: 3vw;
         padding-left: 5vw;
         font-size: 4vw;
         font-family: 'Gill Sans';
@@ -90,35 +100,56 @@
         padding-left: 5vw;
       }
 
+      @media (max-width: 45em) {
+        .aboutmeheader {
+          font-size: 8vw;
+        }
+        .aboutmetext {
+          width: 60vw;
+          font-size: 4vw;
+        }
+        .aboutmegrid {
+          grid-template-columns: 1.2fr 1fr;
+        }
+      } 
+
       .resumebutton {
-        width: 12vw;
-        height: 2.5vw;
+        width: 15vw;
         background-color: rgb(0, 6, 171);
         color: white;
         box-shadow: 3.5px 3.5px #343434;
-        padding: 0 0.5vw;
+        padding: 0.5vw 1vw;
         border-radius: 5px;
-        font-size: 1.3vw;
+        font-size: 2vw;
         left: 5vw;
+        top: 2.5vw;
         position: relative;
         text-decoration: none;
         text-align: center;
-        padding-top: 0.8vw;
         font-family: 'Gill Sans';
         transition: 0.2s;
       }
 
       .resumebutton:hover {
-        width: 12.3vw;
-        height: 2.8vw;
-        font-size: 1.4vw;
+        width: 15.2vw;
+        font-size: 2.2vw;
+      }
+
+      @media (max-width: 45em) {
+        .resumebutton {
+          width: 20vw;
+          font-size: 4vw;
+        }
+
+        .resumebutton:hover {
+          width: 20.2vw;
+          font-size: 4.2vw;
+        }
       }
 
       .educationgrid {
         display: grid;
-        grid-template-columns: 66% 34%;
-        width: 100%;
-        height: auto;
+        grid-template-columns: 66vw 34vw;
         background-color: rgb(223, 223, 223);
       }
 
@@ -136,28 +167,54 @@
         display: grid;
         grid-template-columns: 35vw auto;
         background-color: rgb(223, 223, 223);
-        height: auto;
+      }
+
+      @media (max-width: 45em) {
+        .educationleft {
+          grid-template-columns: 40vw 60vw;
+        }
       }
 
       .uofm {
-        height: 25vw;
+        width: 25vw;
         border-radius: 2vw;
         margin-left: 5vw;
         margin-top: 5vw;
         box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        justify-content: center;
+        position: relative;
+      }
+
+      @media (max-width: 45em) {
+        .uofm {
+          width: 30vw;
+          border-radius: 2vw;
+          margin-left: 5vw;
+          margin-top: 18vw;
+          margin-bottom: 5vw;
+          box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+          justify-content: center;
+          position: relative;
+        }
       }
 
       .educationright {
         background-color: rgb(255, 255, 255);
-        height: auto;
         display: grid;
         grid-template-columns: 13vw 13vw;
       }
 
       @media (max-width: 45em) {
         .educationright {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto auto auto auto auto auto;
+          padding-bottom: 110vw;
+        }
+      }
+
+      @media (max-width: 45em) {
+        .educationright {
           background-color: rgb(255, 255, 255);
-          height: auto;
           display: grid;
           grid-template-columns: 13vw 13vw;
           justify-content: center;
@@ -169,35 +226,45 @@
         font-size: 3vw;
         text-align: center;
         position: relative;
-        left: -2.2vw;
         padding-top: 1.0vw;
         font-family: 'Gill Sans'
+      }
+
+      @media (max-width: 45em) {
+        .educationheader {
+          font-size: 8vw;
+          padding-top: 1.0vw;
+        }
       }
       
       .educationline {
         padding-left: 0vw;
         position: relative;
-        height: 0.2vw;
         width: 26vw;
       }
 
       @media (max-width: 45em) {
         .educationline {
-          padding-left: 17vw;
+          padding-left: 10vw;
           position: relative;
-          height: 0.2vw;
-          width: 26vw;
+          width: 40vw;
         }
       }
 
       .educationinfo {
         text-align: center;
-        left: -2.2vw;
         font-size: 2vw;
         color: black;
         font-family: 'Gill Sans';
         padding-top: 2vw;
         position: relative;
+      }
+
+      @media (max-width: 45em) {
+        .educationinfo {
+        font-size: 4vw;
+        padding-top: 2vw;
+      }
       }
 
       .classesheader1 {
@@ -222,17 +289,37 @@
       
       .classesline {
         position: relative;
-        height: 0.2vw;
         width: 24vw;
         left: 5vw;
         top: -14.7vw;
       }
 
+      @media (max-width: 45em) {
+        .classesheader1 {
+          font-size: 8vw;
+          left: -12.5vw;
+          padding-top: 1.0vw;
+        }
+
+        .classesheader2 {
+          font-size: 8vw;
+          left: 3vw;
+          padding-top: 1.0vw;
+        }
+        
+        .classesline {
+          width: 56vw;
+          height: 1vw;
+          left: -14vw;
+          top: -58vw;
+        }
+      }
+
       .sticky1 {
-        background-image: url('/images/sticky1.png');
+        background-image: url('/images/sticky1.webp');
         background-repeat: no-repeat;
         background-size: 12vw;
-        height: 12vw;
+        width: 12vw;
         color: #343434;
         font-family: 'Bradley Hand';
         padding: 0.5vw;
@@ -243,11 +330,23 @@
         left: 2vw;
       }
 
+      @media (max-width: 45em) {
+        .sticky1 {
+          background-size: 48vw;
+          height: 48vw;
+          width: 48vw;
+          padding: 2vw;
+          font-size: 4vw;
+          top: 8vw;
+          left: -10vw;
+        }
+      }
+
       .sticky2 {
-        background-image: url('/images/sticky2.png');
+        background-image: url('/images/sticky2.webp');
         background-repeat: no-repeat;
         background-size: 13vw;
-        height: 13vw;
+        width: 13vw;
         color: #343434;
         font-family: 'Bradley Hand';
         padding: 0.5vw;
@@ -258,11 +357,23 @@
         left: 6vw;
       }
 
+      @media (max-width: 45em) {
+        .sticky2 {
+          background-size: 52vw;
+          height: 52vw;
+          width: 52vw;
+          padding: 2vw;
+          font-size: 4vw;
+          top: 64vw;
+          left: -20vw;
+        }
+      }
+
       .sticky3 {
-        background-image: url('/images/sticky3.png');
+        background-image: url('/images/sticky3.webp');
         background-repeat: no-repeat;
         background-size: 13vw;
-        height: 13vw;
+        width: 13vw;
         color: #343434;
         font-family: 'Bradley Hand';
         padding: 0.5vw;
@@ -272,11 +383,23 @@
         left: 1vw;
         top: 2vw;
       }
+
+      @media (max-width: 45em) {
+        .sticky3 {
+          background-size: 52vw;
+          width: 52vw;
+          height: 52vw;
+          padding: 2vw;
+          font-size: 4vw;
+          left: -25vw;
+          top: 60vw;
+        }
+      }
       .sticky4 {
-        background-image: url('/images/sticky4.png');
+        background-image: url('/images/sticky4.webp');
         background-repeat: no-repeat;
         background-size: 13vw;
-        height: 13vw;
+        width: 13vw;
         color: #343434;
         font-family: 'Bradley Hand';
         padding: 0.5vw;
@@ -286,11 +409,23 @@
         left: 2vw;
       }
 
+      @media (max-width:45em) {
+        .sticky4 {
+          background-size: 52vw;
+          width: 52vw;
+          height: 52vw;
+          padding: 2vw;
+          font-size: 4vw;
+          left: -12vw;
+          top: 50vw;
+        }
+      }
+
       .sticky5 {
-        background-image: url('/images/sticky5.png');
+        background-image: url('/images/sticky5.webp');
         background-repeat: no-repeat;
         background-size: 13vw;
-        height: 13vw;
+        width: 13vw;
         color: #343434;
         font-family: 'Bradley Hand';
         padding: 0.5vw;
@@ -300,12 +435,24 @@
         left: 7vw;
       }
 
+      @media (max-width: 45em) {
+        .sticky5 {
+          background-size: 52vw;
+          width: 52vw;
+          height: 52vw;
+          padding: 2vw;
+          font-size: 4vw;
+          left: -26vw;
+          top: 110vw;
+        }
+      }
+
       .skills {
         width: 66vw;
         background-color: #002d61;
-        height: 15vw;
         display: grid;
-        grid-template-columns: 11vw auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding-bottom: 2vw;
         color: white;
       }
 
@@ -313,11 +460,13 @@
         .skills {
           width: 100vw;
           background-color: #002d61;
-          height: 15vw;
           display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto auto;
           color: white;
           text-align: center;
+          justify-content: center;
+          padding-bottom: 6vw;
         }
       }
 
@@ -336,6 +485,18 @@
         padding-top: 2vw;
       }
 
+      @media (max-width: 45em) {
+        .skillsheader {
+          justify-content: center;
+          font-size: 8vw;
+        }
+
+        .skillssection {
+          font-size: 4vw;
+          justify-content: center;
+        }
+      }
+
       .projects {
         background-color: rgb(223, 223, 223);
         font-family: 'Gill Sans';
@@ -347,7 +508,6 @@
       .projectgrid {
         display: grid;
         grid-template-columns: 40vw 40vw;
-        padding-top: 2vw;
         column-gap: 7vw;
         row-gap: 5vw;
         justify-content: center;
@@ -358,11 +518,16 @@
         .projectgrid {
           display: grid;
           grid-template-columns: 1fr;
-          padding: 5vw;
+          padding-left: 5vw;
+          padding-right: 5vw;
+          padding-top: 2vw;
           column-gap: 7vw;
           row-gap: 5vw;
           justify-content: center;
           padding-bottom: 5vw;
+        }
+        .projects {
+          font-size: 8vw;
         }
       }
 
@@ -400,6 +565,25 @@
         padding-bottom: 2vw;
       }
 
+      @media (max-width: 45em) {
+
+        .projectheader {
+          font-size: 8vw;
+        }
+
+        .projectgif {
+          width: 80vw;
+        }
+
+        .projectsummary {
+          font-size: 3vw;
+        }
+
+        .projectcontent {
+          font-size: 5vw;
+        }
+      }
+
       .leadership {
         background-color: #002d61;
         font-family: 'Gill Sans';
@@ -409,17 +593,60 @@
         color: white;
       }
 
-      .leadershipcolumns {
+      @media (max-width: 45em) {
+        .leadership {
+          font-size: 8vw;
+        }
+      }
+
+      .leadershiprows {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
         padding: 2vw;
+        row-gap: 2vw;
+      }
+
+      @media (max-width:45em) {
+        .leadershiprows {
+          row-gap: 8vw;
+        }
+      }
+
+      .leadershiprow1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         column-gap: 2vw;
       }
 
+      .leadershiprow2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5vw;
+      }
+
+      @media (max-width: 45em) {
+        .leadershiprow1 {
+          grid-template-columns: 33% 64%;
+        }
+
+        .leadershiprow2 {
+          grid-template-columns: 64% 33%;
+        }
+      }
+
       .leadershippic {
-        height: 30vw;
+        width: 40vw;
         border-radius: 2vw;
         box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        margin-left: 2vw;
+      }
+
+      @media (max-width: 45em) {
+        .leadershippic {
+          width: 30vw;
+          margin-left: 0vw;
+          margin-top: 40%;
+        }
       }
 
       .leadershipheader {
@@ -443,6 +670,20 @@
         color: white;
       }
 
+      @media (max-width: 45em) {
+        .leadershipheader {
+          font-size: 4vw;
+        }
+
+        .leadershiptitle {
+          font-size: 4vw;
+        }
+
+      .leadershipcontent {
+          font-size: 4vw;
+        }
+      }
+
       .footer {
         background-color: rgb(160, 160, 160);
         font-size: 1.4vw;
@@ -456,14 +697,9 @@
 
       @media (max-width: 45em) {
         .footer {
-          background-color: rgb(160, 160, 160);
-          font-size: 1.4vw;
+          font-size: 2vw;
           padding: 2vw;
-          color: white;
-          text-align: center;
-          font-family: 'Gill Sans';
-          line-height: 2vw;
-          text-decoration: none;
+          line-height: 3vw;
         }
       }
 
@@ -483,7 +719,7 @@
             <div class="aboutmetext">
               Hello! My name is Kyle Coon and I'm a programmer from Michigan with a B.S. in Computer Science and a second degree in Film, Television, and Media. 
             </div>
-            <a href="/images/phone.png" class="resumebutton" target="_blank">View Resume</a>
+            <a href="/images/phone.webp" class="resumebutton" target="_blank">View Resume</a>
           </div>
           <div class="aboutmeright">
             <div class="aboutmecover"></div>
@@ -491,10 +727,10 @@
         </div>
         <div class="educationgrid">
           <div class="educationleft" id="educationleft">
-            <img class="uofm" src="/images/uofm.jpeg">
+            <img class="uofm" src="/images/uofm.webp" alt="michigan">
             <div>
               <div class="educationheader">Education</div>
-              <div><img class="educationline" src="/images/line.png"></div>
+              <div><img class="educationline" src="/images/line.webp" alt="line"></div>
               <div class="educationinfo">
                 <b>School:</b> University of Michigan -<br> 
                 College of Literature, Science,<br>
@@ -514,12 +750,12 @@
               <div class="skillssection"><b><u>Computer Security</u><br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
             </div>
           </div>
-          <div class="educationright" id="educationleft">
+          <div class="educationright" id="educationright">
             <div class="classesheader1"> Notable</div>
             <div class="classesheader2"> Classes</div>
             <div class="sticky1"><u>Web Systems:</u> Practical <br> implementations of both <br>front-end and back-<br>&nbsp;end web systems and <br>&nbsp;&nbsp;technologies</div>
             <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Computer Security:</u><br>&nbsp;&nbsp;&nbsp;Assessement, prevention,<br>&nbsp;&nbsp;&nbsp;and exploitation of<br>&nbsp;&nbsp;&nbsp;modern web security<br>&nbsp;&nbsp;&nbsp;designs and their faults</div>
-            <div><img class="classesline" src="/images/line.png"></div>
+            <div><img class="classesline" src="/images/line.webp" alt="line"></div>
             <div class="sticky3">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of machine learning and<br>&nbsp;deep learning</div>
             <div class="sticky4"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br><br>&nbsp;*Winter 2024 Enrollment</div>
             <div class="sticky5"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computergames as well as<br>&nbsp;&nbsp;understanding of the<br>&nbsp;&nbsp;video game industry<br><br>&nbsp;*Winter 2024 Enrollment</div>
@@ -530,7 +766,9 @@
           <div class="projectgrid">
             <div class="projectitem">
               <div class="projectheader">Chess Digitizer</div>
-              <img src="/images/chess.gif" class="projectgif">
+              <video class="projectgif" autoplay muted>
+                <source src="/images/chess.mp4" type="video/mp4">
+              </video>
               <div class="projectsummary">
                 <i>Conversion of image to digital representation</i>
               </div>
@@ -546,7 +784,9 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">Terminle</div>
-              <img src="/images/terminle.gif" class="projectgif">
+              <video class="projectgif" autoplay muted>
+                <source src="/images/terminle.mp4" type="video/mp4">
+              </video>
               <div class="projectsummary">
                 <i>Gameplay with randomly generated word</i>
               </div>
@@ -559,7 +799,9 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">C.R.U.D. Website</div>
-              <img src="/images/kylestagram.gif" class="projectgif">
+              <video class="projectgif" autoplay muted>
+                <source src="/images/kylestagram.mp4" type="video/mp4">
+              </video>
               <div class="projectsummary">
                 <i>Account creation and content browsing</i>
               </div>
@@ -572,7 +814,9 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">Scalable Search Engine</div>
-              <img src="/images/bingle.gif" class="projectgif">
+              <video class="projectgif" autoplay muted>
+                <source src="/images/bingle.mp4" type="video/mp4">
+              </video>
               <div class="projectsummary">
                 <i>Search query and results</i>
               </div>
@@ -585,7 +829,9 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">Distributed Word Count</div>
-              <img src="/images/word.gif" class="projectgif">
+              <video class="projectgif" autoplay muted>
+                <source src="/images/word.mp4" type="video/mp4">
+              </video>
               <div class="projectsummary">
                 <i>Partitioned output after execution on 8 documents</i>
               </div>
@@ -598,7 +844,7 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">This Website!</div>
-              <img src="/images/website.png" class="projectgif">
+              <img src="/images/website.webp" class="projectgif" alt="website">
               <div class="projectsummary">
                 <i>Landing page for this website</i>
               </div>
@@ -613,20 +859,22 @@
         </div>
         <div class="leadership">
           Leadership Experience
-          <div class="leadershipcolumns">
-            <div>
-              <img src="/images/glee.jpg" class="leadershippic">
-              <br><br>
-              <div class="leadershipheader">The Friars</div>
-              <div class="leadershiptitle"><i>President</i></div>
-              <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
+          <div class="leadershiprows">
+            <div class="leadershiprow1">
+              <img src="/images/glee.webp" class="leadershippic" alt="glee">
+              <div>
+                <div class="leadershipheader">U of M Men's Glee Club</div>
+                <div class="leadershiptitle"><i>Vice President</i></div>
+                <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
+              </div>
             </div>
-            <div>
-              <div class="leadershipheader">University of Michigan Men's Glee Club</div>
-              <div class="leadershiptitle"><i>Vice President</i></div>
-              <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
-              <br>
-              <img src="/images/friars.jpg" class="leadershippic">
+            <div class="leadershiprow2">
+              <div>
+                <div class="leadershipheader">The Friars</div>
+                <div class="leadershiptitle"><i>President</i></div>
+                <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
+              </div>
+              <img src="/images/friars.webp" class="leadershippic" alt="friars">
             </div>
           </div>
         </div>
