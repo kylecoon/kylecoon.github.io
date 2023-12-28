@@ -5,125 +5,166 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
-* {
-  box-sizing: border-box;
-}
-h1 {
-  font-weight: normal;
-  font-size:4vw;
-  top:18vw;
-  font-family: 'Gill Sans';
-  color: rgb(230, 230, 230);
-  padding-left: 3vw;
-  position: absolute;
-  text-shadow: 2px 2px #040069;
-}
-html, body {
-  background-image: url('/images/landing.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:100%;
-}
+      h1 {
+        font-weight: normal;
+        font-size:4vw;
+        font-family: 'Gill Sans';
+        color: rgb(230, 230, 230);
+        position: relative;
+        text-shadow: 2px 2px #040069;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        top: 30vh
+      }
 
-.scroller {
-  height: 1.2em;
-  line-height: 1.2em;
-  position: relative;
-  overflow: hidden;
-  width: 20em;
-  text-align: center;
-  left: -28vw
-}
-.scroller > span {
-  position: absolute;
-  top: 0;
-  animation: slide 5s infinite;
-  font-weight: bold;
-  
-}
-@keyframes slide {
-  0% {
-    top: 0;
-  }
-  33.3% {
-    top: -1.2em;
-  }
-  66.6% {
-    top: -2.4em;
-  }
-}
+      @media (max-width: 45em) {
+        h1 { 
+          font-size: 7vw;
+          top: 0vw;
+          grid-row-start: 1;
+          grid-row-end: 2;
+          padding-left: 1vw;
+        }
+      }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  padding: 2vw;
-  right: 2vw;
-  position: absolute;
-  row-gap: 2vw;
-}
+      html, body {
+        background-image: url('/images/landing.webp');
+        background-repeat: no-repeat;
+        background-size: cover
+      }
 
-.grid-cs {
-  background-image: url('/images/cs.avif');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:14vw;
-  width: 40vw;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.5vw;
-  display: inline-grid;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-}
+      @media (max-width: 45em) {
+        html, body {
+          background-image: url('/images/landing.webp');
+          background-size:auto;
+        }
+      }
 
-.grid-film {
-  background-image: url('/images/film.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:14vw;
-  width: 40vw;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.5vw;
-  display: inline-grid;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-}
+      .scroller {
+        height: 1.2em;
+        line-height: 1.2em;
+        position: relative;
+        overflow: hidden;
+        width: 20em;
+        text-align: center;
+        left: -15vw
+      }
 
-.grid-both {
-  background-image: url('/images/both.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height:14vw;
-  width: 40vw;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 1);
-  font-size: 1.5vw;
-  display: inline-grid;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
-}
+      @media (max-width: 45em) {
+        .scroller {
+          left: -25vw
+        }
+      }
 
-.grid-cover {
-  background-color: rgba(87, 87, 87, 0.6);
-  color: rgba(255, 255, 255, 1);
-  text-shadow: 2px 2px #040069;
-  border-radius: 8px;
-  height:14vw;
-  width: 40vw;
-  transition: 0.3s;
-  text-align: center;
-  font-family: 'Gill Sans';
-  font-size: 3vw;
-  padding: 5vw 0;
-}
+      .scroller > span {
+        position: relative;
+        top: 0;
+        animation: slide 5s infinite;
+        font-weight: bold;
+        
+      }
+      @keyframes slide {
+        0% {
+          top: 0;
+        }
+        33.3% {
+          top: -1.2em;
+        }
+        66.6% {
+          top: -2.4em;
+        }
+      }
 
-.grid-cover:hover{
-  background-color: rgba(87, 87, 87, 0.1);
-  color: rgba(255, 255, 255, 1);
-}
+      .grid-cs {
+        background-image: url('/images/cs.avif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 1vw;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.5vw;
+        display: inline-grid;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+      }
+
+      .grid-film {
+        background-image: url('/images/film.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 1vw;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.5vw;
+        display: inline-grid;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+      }
+
+      .grid-both {
+        background-image: url('/images/both.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 1vw;
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.5vw;
+        display: inline-grid;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+      }
+
+      .grid-cover {
+        background-color: rgba(87, 87, 87, 0.6);
+        text-shadow: 2px 2px #040069;
+        border-radius: 1vw;
+        height: 100%;
+        width: inherit;
+        transition: 0.3s;
+      }
+
+      .grid-cover:hover{
+        background-color: rgba(87, 87, 87, 0.1);
+      }
+
+      .grid-text {
+        font-family: 'Gill Sans';
+        font-size: 3vw;
+        text-align: center;
+        padding-top: 9.5vh;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+      }
+
+      @media (max-width: 45em) {
+        .grid-text {
+          font-size: 8vw;
+          padding-top: 8vh;
+        }
+      }
+
+      .grid {
+        padding-top: 6vh;
+        display: grid;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        grid-template-columns: 52vw 38vw;
+        grid-template-rows: 27vh 27vh 27vh;
+        row-gap: 2vw;
+      }
+
+      @media (max-width: 45em) {
+        .grid {
+          grid-template-columns: 89vw;
+          padding: 4vw;
+          grid-template-rows: 9vh 20vh 20vh 20vh;
+          row-gap: 5vh;
+        }
+      }
     </style>
     <body>
-        <h1>WELCOME TO MY WEBSITE, 
-            <!-- Scroller Start -->
-              
+      <div class="grid">
+        <h1> WELCOME TO MY WEBSITE,       
           <div class="scroller">
             <span>
               &lt;employers&gt;<br/>
@@ -131,25 +172,22 @@ html, body {
               &lt;fans&gt;<br/>
             </span>
           </div>
-              
-            <!-- Scroller End -->
         </h1>
-        <div class="grid-container">
-          <div class="grid-cs">
-            <a href="/cs/" style="text-decoration:none;"><div class="grid-cover">
-              COMPUTER SCIENCE
-            </div></a>
-          </div>
-          <div class="grid-film">
-            <a href="/film/" style="text-decoration:none;"><div class="grid-cover">
-              FILM
-            </div></a>
-          </div>
-          <div class="grid-both">
-            <a href="/both/" style="text-decoration:none;"><div class="grid-cover">
-              BOTH
-            </div></a>
-          </div>
+        <div class="grid-cs" id="button1">
+          <a href="/cs/" style="text-decoration:none;"><div class="grid-cover">
+            <div class="grid-text">COMPUTER SCIENCE</div>
+          </div></a>
         </div>
+        <div class="grid-film">
+          <a href="/film/" style="text-decoration:none;"><div class="grid-cover">
+            <div class="grid-text">FILM</div>
+          </div></a>
+        </div>
+        <div class="grid-both">
+          <a href="/both/" style="text-decoration:none;"><div class="grid-cover">
+            <div class="grid-text">BOTH</div>
+          </div></a>
+        </div>
+      </div>
     </body>
 </html>
