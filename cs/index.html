@@ -3,6 +3,9 @@
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Kyle Coon</title>
+      <link
+      rel="stylesheet"
+      href="/swiper.css"/>
     </head>
     <style>
       html, body {
@@ -38,10 +41,11 @@
 
       @media (max-width: 45em) {
         .topnav {
-          grid-template-columns: 150px 50px 50px;
+          grid-template-columns: 180px 50px 50px;
         }
         .topnav a {
-          font-size: 16px;
+          font-size: 20px;
+          padding: 2vw;
         }
       }
 
@@ -61,12 +65,6 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 25vw;
         position: relative;
-      }
-
-      @media (max-width: 45em) {
-        .aboutmegrid {
-          grid-template-rows: 47vw;
-        }
       }
 
       .aboutmeleft {
@@ -110,6 +108,7 @@
         }
         .aboutmegrid {
           grid-template-columns: 1.2fr 1fr;
+          grid-template-rows: 50vw;
         }
       } 
 
@@ -207,18 +206,9 @@
 
       @media (max-width: 45em) {
         .educationright {
-          grid-template-columns: 1fr;
-          grid-template-rows: auto auto auto auto auto auto auto auto;
-          padding-bottom: 110vw;
-        }
-      }
-
-      @media (max-width: 45em) {
-        .educationright {
-          background-color: rgb(255, 255, 255);
-          display: grid;
           grid-template-columns: 13vw 13vw;
           justify-content: center;
+          padding-bottom: 132vw;
         }
       }
 
@@ -250,6 +240,8 @@
           padding-left: 10vw;
           position: relative;
           width: 40vw;
+          height: 1vw;
+          top: -1vw;
         }
       }
 
@@ -294,7 +286,7 @@
         width: 24vw;
         height: 0.3vw;
         left: 5vw;
-        top: -15.4vw;
+        top: -19.7vw;
       }
 
       @media (max-width: 45em) {
@@ -314,7 +306,7 @@
           width: 56vw;
           height: 1vw;
           left: -14vw;
-          top: -58vw;
+          top: -62.5vw;
         }
       }
 
@@ -335,13 +327,13 @@
 
       @media (max-width: 45em) {
         .sticky1 {
-          background-size: 48vw;
-          height: 48vw;
-          width: 48vw;
-          padding: 2vw;
-          font-size: 4vw;
-          top: 8vw;
-          left: -10vw;
+          background-size: 54vw;
+          height: 54vw;
+          width: 54vw;
+          padding: 2.25vw;
+          font-size: 4.5vw;
+          top: 13vw;
+          left: -18vw;
         }
       }
 
@@ -362,13 +354,13 @@
 
       @media (max-width: 45em) {
         .sticky2 {
-          background-size: 52vw;
-          height: 52vw;
-          width: 52vw;
-          padding: 2vw;
-          font-size: 4vw;
-          top: 64vw;
-          left: -20vw;
+          background-size: 58.5vw;
+          height: 58.5vw;
+          width: 58.5vw;
+          padding: 2.25vw;
+          font-size: 4.5vw;
+          top: 76vw;
+          left: -28vw;
         }
       }
 
@@ -389,13 +381,13 @@
 
       @media (max-width: 45em) {
         .sticky3 {
-          background-size: 52vw;
-          width: 52vw;
-          height: 52vw;
-          padding: 2vw;
-          font-size: 4vw;
-          left: -25vw;
-          top: 60vw;
+          background-size: 58.5vw;
+          width: 58.5vw;
+          height: 58.5vw;
+          padding: 2.25vw;
+          font-size: 4.5vw;
+          left: -32vw;
+          top: 75vw;
         }
       }
       .sticky4 {
@@ -414,13 +406,13 @@
 
       @media (max-width:45em) {
         .sticky4 {
-          background-size: 52vw;
-          width: 52vw;
-          height: 52vw;
-          padding: 2vw;
-          font-size: 4vw;
-          left: -12vw;
-          top: 50vw;
+          background-size: 58.5vw;
+          width: 58.5vw;
+          height: 58.5vw;
+          padding: 2.25vw;
+          font-size: 4.5vw;
+          left: -20vw;
+          top: 64vw;
         }
       }
 
@@ -441,13 +433,13 @@
 
       @media (max-width: 45em) {
         .sticky5 {
-          background-size: 52vw;
-          width: 52vw;
-          height: 52vw;
-          padding: 2vw;
-          font-size: 4vw;
+          background-size: 58.5vw;
+          width: 58.5vw;
+          height: 58.5vw;
+          padding: 2.25vw;
+          font-size: 4.5vw;
           left: -26vw;
-          top: 110vw;
+          top: 130vw;
         }
       }
 
@@ -455,7 +447,7 @@
         width: 66vw;
         background-color: #002d61;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 0.8fr 0.1fr;
         padding-bottom: 2vw;
         color: white;
       }
@@ -476,17 +468,19 @@
 
       .skillsheader {
         padding-top: 5vw;
-        padding-left: 2vw;
         font-size: 4vw;
-        font-family: 'Gill Sans'
+        margin-left: 1vw;
+        margin-top: 3.1vw;
+        font-family: 'Gill Sans';
+        text-align: center;
       }
 
       .skillssection {
-        font-size: 1.5vw;
-        font-family: 'Gill Sans';
-        text-align: center;
+        width: 37vw;
+        margin-left: 1.5vw;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
         position: relative;
-        padding-top: 2vw;
       }
 
       @media (max-width: 45em) {
@@ -496,8 +490,9 @@
         }
 
         .skillssection {
-          font-size: 4vw;
-          justify-content: center;
+          width: 80vw;
+          margin-right: 15vw;
+          margin-bottom: 9vw;
         }
       }
 
@@ -574,6 +569,7 @@
 
         .projectheader {
           font-size: 8vw;
+          padding-top: 2vw;
         }
 
         .projectgif {
@@ -586,6 +582,40 @@
 
         .projectcontent {
           font-size: 5vw;
+          padding-bottom: 2vw;
+        }
+      }
+
+      .codebutton {
+        background-color: rgb(223, 223, 223);
+        font-size: 1.4vw;
+        padding: 1vw;
+        border-radius: 1vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        text-decoration: none;
+        color: #002d61;
+        width: 8vw;
+        position: relative;
+        margin: 0 auto;
+        transition: 0.2s;
+      }
+
+      .codebutton:hover {
+        width: 9vw;
+        font-size: 1.575vw;
+      }
+
+      @media (max-width: 45em) {
+        .codebutton {
+          font-size: 5vw;
+          padding: 2vw;
+          width: 28vw;
+          margin-bottom: 3vw;
+        }
+
+        .codebutton:hover {
+          width: 9vw;
+          font-size: 1.575vw;
         }
       }
 
@@ -708,6 +738,16 @@
         }
       }
 
+      .mySwiper{
+          width: 45vw;
+        }
+      
+        @media (max-width: 45em) {
+          .mySwiper{
+            width: 95vw;
+          }
+        }
+
     </style>
     <body>
       <div class="container">
@@ -750,9 +790,41 @@
             </div>
             <div class="skills">
               <div class="skillsheader">Skills</div>
-              <div class="skillssection"><b><u>Software Engineering</u><br></b><br>C++<br>Python<br>Java<br>Git</div>
-              <div class="skillssection"><b><u>Web Development</u><br><br></b>JavaScript<br>SQL<br>React<br>AWS</div>
-              <div class="skillssection"><b><u>Computer Security</u><br></b><br>Wireshark<br>Ghidra<br>Shell Scripting<br>Cryptography</div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/images/software.webp" alt="software" class="skillssection">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/webdev.webp" alt="webdev" class="skillssection">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/images/compsec.webp" alt="compsec" class="skillssection">
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  },
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
             </div>
           </div>
           <div class="educationright" id="educationright">
@@ -771,7 +843,7 @@
           <div class="projectgrid">
             <div class="projectitem">
               <div class="projectheader">Chess Digitizer</div>
-              <video class="projectgif" autoplay loop muted>
+              <video class="projectgif" controls muted>
                 <source src="/images/chess.mp4" type="video/mp4">
               </video>
               <div class="projectsummary">
@@ -781,30 +853,28 @@
                 Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved with a corner-recognition algorithm and neural network written in Python.
                 <br>
                 <br>
-                Check out my report on the project <b><a href="/images/ChessReport.pdf" target="_blank" style="color:inherit;">HERE!</a></b>
-                <br>
-                <br>
-                Check out my code for the project <b><a href="https://github.com/kylecoon/chess" target="_blank" style="color:inherit;">HERE!</a></b>
+                <a href="/images/ChessReport.pdf" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content;margin-right:0.5vw;"><div class="codebutton">View Report</div></a>
+                <a href="https://github.com/kylecoon/chess" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content;margin-left:0.5vw;"><div class="codebutton">View Code</div></a>
               </div>
             </div>
             <div class="projectitem">
               <div class="projectheader">Terminle</div>
-              <video class="projectgif" autoplay loop muted>
+              <video class="projectgif" controls muted>
                 <source src="/images/terminle.mp4" type="video/mp4">
               </video>
               <div class="projectsummary">
                 <i>Gameplay with randomly generated word</i>
               </div>
               <div class="projectcontent">
-                Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal. Gameplay options include the standard version with random-word generation or a custom word input mode for local co-op play. The program is written in C++ with a text-coloring library. 
+                Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal with two gameplay options. The program was written in C++ with a text-coloring library. 
                 <br>
                 <br>
-                Check out my code for the project <b><a href="https://github.com/kylecoon/terminle" target="_blank" style="color:inherit;">HERE!</a></b>
+                <a href="https://github.com/kylecoon/terminle" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content"><div class="codebutton">View Code</div></a>
               </div>
             </div>
             <div class="projectitem">
               <div class="projectheader">C.R.U.D. Website</div>
-              <video class="projectgif" autoplay loop muted>
+              <video class="projectgif" controls muted>
                 <source src="/images/kylestagram.mp4" type="video/mp4">
               </video>
               <div class="projectsummary">
@@ -819,7 +889,7 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">Scalable Search Engine</div>
-              <video class="projectgif" autoplay loop muted>
+              <video class="projectgif" controls muted>
                 <source src="/images/bingle.mp4" type="video/mp4">
               </video>
               <div class="projectsummary">
@@ -834,7 +904,7 @@
             </div>
             <div class="projectitem">
               <div class="projectheader">Distributed Word Count</div>
-              <video class="projectgif" autoplay loop muted>
+              <video class="projectgif" controls muted>
                 <source src="/images/word.mp4" type="video/mp4">
               </video>
               <div class="projectsummary">
@@ -854,10 +924,10 @@
                 <i>Landing page for this website</i>
               </div>
               <div class="projectcontent">
-                Instead of using a website builder, this entire website was designed and hand-written by me. This was the first website I made with a focus on aesthetics, and while it certainly has a lot of room for improvement, I was able to teach myself many important principals of visually appealing web design.
+                Instead of using a website builder, this entire website was hand-written. This was my first aesthetics-first, and while there's room for improvement, I was able to learn many important principals of responsive web design.
                 <br>
                 <br>
-                Check out my "code" for the project <b><a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="color:inherit;">HERE!</a></b>
+                <a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content"><div class="codebutton">View Code</div></a>
               </div>
             </div>
           </div>
