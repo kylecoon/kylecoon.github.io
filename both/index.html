@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+      <meta name="description" content="Portfolio website of Kyle Coon.">
       <title>Kyle Coon</title>
     </head>
     <style>
@@ -12,7 +14,7 @@
       div.div2 {
         top:100%;
       }
-      
+
       .topnav {
         position: sticky;
         top: 0;
@@ -32,29 +34,933 @@
         padding: 0.6vw 0.8vw;
         text-decoration: none;
         font-size: 30px;
-        font-family: 'Tahoma';
+        font-family: 'Gill Sans';
         transition: 0.2s;
       }
 
-      @media (max-width: 45em) {
-        .topnav {
-          grid-template-columns: 150px 50px 50px;
-        }
-        .topnav a {
-          font-size: 16px;
-        }
-      }
-
-      /* Change the color of links on hover */
       .topnav a:hover {
         background-color: rgb(0, 0, 72);
       }
 
-      /* Add a color to the active/current link */
       .topnav a.active {
         background-color: rgb(223, 223, 223);
         color: rgb(0, 0, 0);
       }
+
+      .aboutmegrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25vw;
+        position: relative;
+      }
+
+      .aboutmeleft {
+        background-color: rgb(79, 79, 79);
+      }
+      
+      .aboutmecover {
+        background: linear-gradient(90deg, rgba(79, 79, 79, 1), rgba(79, 79, 79, 0));
+      }
+
+      .aboutmeright {
+        background-image: url('/images/me3.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-grid;
+      }
+
+      .aboutmeheader {
+        padding-top: 3vw;
+        padding-left: 5vw;
+        font-size: 4vw;
+        font-family: 'Gill Sans';
+        color: white;
+      }
+
+      .aboutmetext {
+        font-size: 2vw;
+        font-family: 'Gill Sans';
+        color: white;
+        width: 38vw;
+        padding-left: 5vw;
+      }
+
+      .resumebutton {
+        width: 15vw;
+        background-color: rgb(0, 6, 171);
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        padding: 0.5vw 1vw;
+        border-radius: 5px;
+        font-size: 2vw;
+        left: 5vw;
+        top: 2.5vw;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Gill Sans';
+        transition: 0.2s;
+      }
+
+      .resumebutton:hover {
+        width: 15.2vw;
+        font-size: 2.2vw;
+      }
+
+      .educationgrid {
+        display: grid;
+        grid-template-columns: 66vw 34vw;
+        background-color: rgb(223, 223, 223);
+      }
+
+      .educationleft {
+        display: grid;
+        grid-template-columns: 35vw auto;
+        background-color: rgb(223, 223, 223);
+      }
+
+      .uofm {
+        width: 25vw;
+        border-radius: 2vw;
+        margin-left: 5vw;
+        margin-top: 5vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        justify-content: center;
+        position: relative;
+      }
+
+      .educationright {
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-columns: 10vw 10vw;
+      }
+
+      .educationheader {
+        color: black;
+        font-size: 3vw;
+        text-align: center;
+        position: relative;
+        padding-top: 1.0vw;
+        font-family: 'Gill Sans'
+      }
+      
+      .educationline {
+        padding-left: 6.5vw;
+        position: relative;
+        width: 18vw;
+        height: 0.3vw;
+      }
+
+      .educationinfo {
+        text-align: center;
+        font-size: 2vw;
+        color: black;
+        font-family: 'Gill Sans';
+        padding-top: 2vw;
+        position: relative;
+      }
+
+      .classesheader1 {
+        color: black;
+        font-size: 3vw;
+        text-align: center;
+        position: relative;
+        left: 7vw;
+        padding-top: 1.0vw;
+        font-family: 'Gill Sans'
+      }
+
+      .classesheader2 {
+        color: black;
+        font-size: 3vw;
+        text-align: center;
+        position: relative;
+        left: 7vw;
+        padding-top: 1.0vw;
+        font-family: 'Gill Sans'
+      }
+      
+      .classesline {
+        position: relative;
+        width: 24vw;
+        height: 0.3vw;
+        left: -2vw;
+        top: -1.96vw;
+      }
+
+      .sticky1 {
+        background-image: url('/images/sticky1.webp');
+        background-repeat: no-repeat;
+        background-size: 12vw;
+        width: 12vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(-10deg);
+        top: -3vw;
+        left: 3vw;
+        line-height: 1.1vw;
+      }
+
+      .sticky2 {
+        background-image: url('/images/sticky2.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(-10deg);
+        top: 0vw;
+        left: 8vw;
+      }
+
+      .sticky3 {
+        background-image: url('/images/sticky3.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(-5deg);
+        left: 4vw;
+        top: -2vw;
+      }
+      .sticky4 {
+        background-image: url('/images/sticky2.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(1deg);
+        top: 1vw;
+        left: 7vw;
+      }
+
+      .sticky5 {
+        background-image: url('/images/sticky1.webp');
+        background-repeat: no-repeat;
+        background-size: 12vw;
+        width: 12vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(0deg);
+        top: 0vw;
+        left: 3vw;
+      }
+
+      .sticky6 {
+        background-image: url('/images/sticky1.webp');
+        background-repeat: no-repeat;
+        background-size: 12vw;
+        width: 12vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(10deg);
+        top: -2vw;
+        left: 8vw;
+      }
+
+      .sticky7 {
+        background-image: url('/images/sticky2.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(5deg);
+        top: -2vw;
+        left: 3vw;
+      }
+
+      .sticky8 {
+        background-image: url('/images/sticky3.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(5deg);
+        left: 8vw;
+        top: -0vw;
+      }
+
+      .sticky9 {
+        background-image: url('/images/sticky4.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(0deg);
+        left: 7vw;
+      }
+
+      .sticky10 {
+        background-image: url('/images/sticky5.webp');
+        background-repeat: no-repeat;
+        background-size: 13vw;
+        width: 13vw;
+        color: #343434;
+        font-family: 'Bradley Hand';
+        padding: 0.5vw;
+        font-size: 1vw;
+        position: relative;
+        transform: rotate(-10deg);
+        left: 3vw;
+        top: -1vw;
+      }
+
+      .skills {
+        width: 66vw;
+        background-color: #002d61;
+        display: grid;
+        grid-template-columns: 0.8fr 0.1fr;
+        padding-bottom: 2vw;
+        color: white;
+      }
+
+      .skillsheader {
+        padding-top: 5.5vw;
+        font-size: 4vw;
+        margin-left: 1vw;
+        margin-top: 3.3vw;
+        font-family: 'Gill Sans';
+        text-align: center;
+      }
+
+      .skillssection {
+        width: 37vw;
+        margin-top: 1vw;
+        margin-bottom: 4vw;
+        position: relative;
+        left: 3vw;
+      }
+      .awards {
+        width: 66vw;
+        background-color: #FFCB05;
+        display: grid;
+        grid-template-columns: 0.8fr 0.1fr;
+        padding-bottom: 2vw;
+        color: white;
+      }
+
+      .awardsheader {
+        color: #002d61;
+        font-size: 4vw;
+        margin-left: 0vw;
+        margin-top: 5.5vw;
+        font-family: 'Gill Sans';
+        text-align: center;
+      }
+
+      .awardssection {
+        color: #002d61;
+        font-size: 2vw;
+        font-family: 'Gill Sans';
+        width: 37vw;
+        margin-top: 3vw;
+        position: relative;
+        left: 1vw;
+        text-align: center;
+      }
+      
+      .awardee {
+        color: white;
+        font-family: 'Gill Sans';
+        font-size: 2vw;
+        font-style: italic;
+      }
+
+      .projects {
+        background-color: rgb(223, 223, 223);
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        padding-top: 2vw;
+        text-align: center;
+        height: max-content;
+        color: #002d61;
+        padding-bottom: 2vw;
+      }
+
+      .filmgrid {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+      }
+
+      .filmrow1 {
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        grid-template-rows: auto;
+      }
+
+      .filmrow2 {
+        display: grid;
+        grid-template-columns: 60vw 40vw;
+        grid-template-rows: auto;
+      }
+
+      .filmitem {
+        border-color: black;
+        width: 60vw;
+        height: max-content;
+        position: relative;
+        border-top-left-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+        background-color: #002d61;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        margin-top: 2vw;
+        text-align: center;
+        color: white;
+      }
+
+      .projectitem {
+        border-color: black;
+        width: 60vw;
+        height: max-content;
+        position: relative;
+        border-top-right-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+        background-color: #002d61;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        margin-top: 2vw;
+        text-align: center;
+        color: white;
+      }
+
+      .filmtitle {
+        font-size: 3.5vw;
+        color: #002d61;
+        padding-top: 15vw;
+
+      }
+
+      .film {
+        width: 40vw;
+        height: 22.5vw;
+        margin-top: 2vw;
+        border-radius: 1vw;
+        border: 5px solid black;
+      }
+
+      .filmroles {
+        color: #FFCB05;
+        font-family: 'Gill Sans';
+        font-size: 2vw;
+        font-style: italic;
+        letter-spacing: 0.07vw;
+      }
+
+      .filmsummary {
+        font-family: 'Gill Sans';
+        font-size: 2vw;
+        padding-left: 9vw;
+        padding-right: 9vw;
+        padding-top: 0.7vw;
+        padding-bottom: 1vw;
+      }
+
+      .lines {
+        width: 20vw;
+        position: relative;
+        top: -0.4vw;
+      }
+
+      .projectheader {
+        font-size: 2.5vw;
+        padding: 1vw;
+        color: white;
+      }
+
+      .projectgif {
+        width: 30vw;
+        justify-content: center;
+        border-radius: 1vw;
+        border: 5px solid black;
+      }
+
+      .projectsummary {
+        color: #FFCB05;
+        font-size: 2vw;
+        padding-left: 0.7vw;
+        padding-right: 0.7vw;
+        padding-bottom: 0.8vw;
+      }
+
+      .projectcontent {
+        font-size: 1.4vw;
+        padding-left: 8vw;
+        padding-right: 8vw;
+        padding-bottom: 2vw;
+      }
+
+      .codebutton {
+        background-color: #FFCB05;
+        font-size: 1.4vw;
+        padding: 1vw;
+        border-radius: 1vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        text-decoration: none;
+        color: #002d61;
+        width: 8vw;
+        position: relative;
+        margin: 0 auto;
+        transition: 0.2s;
+      }
+
+      .codebutton:hover {
+        width: 9vw;
+        font-size: 1.575vw;
+      }
+
+      .leadership {
+        background-color: #002d61;
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        padding: 2vw;
+        text-align: center;
+        color: #FFCB05;
+      }
+
+      .leadershiprows {
+        display: grid;
+        grid-template-rows: auto auto;
+        padding: 2vw;
+        row-gap: 2vw;
+      }
+
+      .leadershiprow1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2vw;
+      }
+
+      .leadershiprow2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.5vw;
+      }
+
+      .leadershippic {
+        width: 40vw;
+        border-radius: 2vw;
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+        margin-left: 2vw;
+      }
+
+      .leadershipheader {
+        font-family: 'Gill Sans';
+        font-size: 4vw;
+        text-align: center;
+        color: white;
+      }
+
+      .leadershiptitle {
+        font-family: 'Gill Sans';
+        font-size: 2.5vw;
+        text-align: center;
+        color: #FFCB05;
+      }
+
+      .leadershipcontent {
+        font-family: 'Gill Sans';
+        font-size: 2.5vw;
+        text-align: center;
+        color: white;
+      }
+
+      .footer {
+        background-color: rgb(160, 160, 160);
+        font-size: 1.4vw;
+        padding: 2vw;
+        color: white;
+        text-align: center;
+        font-family: 'Gill Sans';
+        line-height: 2vw;
+        text-decoration: none;
+      }
+
+      .mySwiper{
+          width: 45vw;
+          left: 1.5vw;
+        }
+      
+        @media (max-width: 45em) {
+          .topnav {
+            grid-template-columns: 176px 50px 50px;
+          }
+          .topnav a {
+            font-size: 20px;
+            padding: 2vw;
+          }
+          .aboutmeheader {
+            font-size: 8vw;
+          }
+          .aboutmetext {
+            width: 60vw;
+            font-size: 4vw;
+          }
+          .aboutmegrid {
+            grid-template-columns: 1.2fr 1fr;
+            grid-template-rows: 50vw;
+          }
+          .resumebutton {
+            width: 20vw;
+            font-size: 4vw;
+            padding: 1vw 1.8vw;
+          }
+
+          .resumebutton:hover {
+            width: 20.2vw;
+            font-size: 4.2vw;
+          }
+          .educationgrid{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "educationleft",
+            "educationright";
+          }
+          .educationleft {
+            grid-template-columns: 38vw 60vw;
+          }
+          .uofm {
+            width: 30vw;
+            margin-top: 18vw;
+          }
+          .educationright {
+            grid-template-columns: 13vw 13vw;
+            justify-content: center;
+          }
+          .educationheader {
+            font-size: 8vw;
+            padding-top: 2.0vw;
+          }
+          .educationline {
+            padding-left: 10vw;
+            position: relative;
+            width: 40vw;
+            height: 1vw;
+            top: -1vw;
+          }
+          .educationinfo {
+            font-size: 4vw;
+            padding-top: 2vw;
+          }
+          .classesheader1 {
+            font-size: 8vw;
+            left: -12.5vw;
+            padding-top: 3.0vw;
+          }
+
+          .classesheader2 {
+            font-size: 8vw;
+            left: 3vw;
+            padding-top: 3.0vw;
+          }
+          
+          .classesline {
+            width: 56vw;
+            height: 1vw;
+            left: -2vw;
+            top: -4vw;
+          }
+          .sticky1 {
+            background-size: 41.53vw;
+            height: 41.53vw;
+            width: 41.53vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 0vw;
+            left: -33vw;
+            line-height: 3.46vw;
+          }
+          .sticky2 {
+            background-size: 45vw;
+            height: 45vw;
+            width: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 2vw;
+            left: 0vw;
+          }
+          .sticky3 {
+            background-size: 45vw;
+            width: 45vw;
+            height: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            left: -34vw;
+            top: 0vw;
+            transform: rotate(-5deg);
+          }
+          .sticky4 {
+            background-size: 41.53vw;
+            height: 41.53vw;
+            width: 41.53vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 0vw;
+            left: 2vw;
+          }
+          .sticky5 {
+            background-size: 41.53vw;
+            height: 41.53vw;
+            width: 41.53vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 0vw;
+            left: -33vw;
+            transform: rotate(-5deg)
+          }
+          .sticky6 {
+            background-size: 41.53vw;
+            height: 41.53vw;
+            width: 41.53vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 0vw;
+            left: 0vw;
+          }
+          .sticky7 {
+            background-size: 45vw;
+            height: 45vw;
+            width: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            top: 0vw;
+            left: -36vw;
+          }
+          .sticky8 {
+            background-size: 45vw;
+            width: 45vw;
+            height: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            left: 0vw;
+            top: 0vw;
+          }
+          .sticky9 {
+            background-size: 45vw;
+            width: 45vw;
+            height: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            left: 0vw;
+            top: 0vw;
+          }
+          .sticky10 {
+            background-size: 45vw;
+            width: 45vw;
+            height: 45vw;
+            padding: 1.73vw;
+            font-size: 3.46vw;
+            left: -33vw;
+            transform: rotate(5deg)
+
+          }
+          .skills {
+            width: 100vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            padding-bottom: 6vw;
+          }
+          .skillsheader {
+            font-size: 8vw;
+            margin-top: 0vw;
+          }
+
+          .skillssection {
+            width: 70vw;
+            margin-bottom: 13vw;
+            left: 12vw;
+          }
+          .awards {
+            width: 100vw;
+            padding-bottom: 6vw;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+          }
+          .awardsheader {
+            font-size: 8vw;
+            margin-top: 4vw;
+          }
+
+          .awardssection {
+            padding-top: 3vw;
+            font-size: 5vw;
+            width: 100vw
+          }
+          .awardee {
+            font-size: 5vw;
+          }
+          .projects {
+            font-size: 12vw;
+            padding-top: 4vw;
+            text-align: center;
+            height: max-content;
+            color: #002d61;
+            padding-bottom: 10vw;
+          }
+
+          .filmgrid {
+            display: grid;
+            grid-template-rows: auto auto auto auto auto auto auto;
+            grid-template-columns: auto;
+            row-gap: 0vw;
+            margin-top: -8vw;
+          }
+
+          .filmrow1 {
+            font-size: 4vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+          }
+
+          .filmrow2 {
+            font-size: 4vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+          }
+
+          .filmitem {
+            width: 90vw;
+            left: 10vw;
+          }
+
+          .projectitem {
+            width: 90vw;
+          }
+
+          .filmtitle {
+            font-size: 8vw;
+            color: #002d61;
+            padding-top: 10vw;
+            order: -1;
+          }
+
+          .film {
+            width: 70vw;
+            height: 39.375vw;
+            margin-top: 6vw;
+          }
+
+          .filmroles {
+            color: #FFCB05;
+            font-family: 'Gill Sans';
+            font-size: 4vw;
+            font-style: italic;
+            letter-spacing: 0.07vw;
+            padding-top: 1.5vw;
+          }
+
+          .filmsummary {
+            font-family: 'Gill Sans';
+            font-size: 4vw;
+            padding-left: 9vw;
+            padding-right: 9vw;
+            padding-top: 1.5vw;
+            padding-bottom: 3vw;
+          }
+
+          .lines {
+            width: 40vw;
+            position: relative;
+            top: -1vw;
+          }
+
+          .projectheader {
+            font-size: 8vw;
+            padding-top: 2vw;
+          }
+
+          .projectsummary {
+            font-size: 3vw;
+          }
+
+          .projectcontent {
+            font-size: 5vw;
+            padding-bottom: 2vw;
+          }
+          .codebutton {
+            font-size: 5vw;
+            padding: 2vw;
+            width: 28vw;
+            margin-bottom: 3vw;
+          }
+
+          .codebutton:hover {
+            width: 30vw;
+            font-size: 5.357vw;
+          }
+          .leadership {
+            font-size: 8vw;
+          }
+          .leadershiprows {
+            row-gap: 8vw;
+          }
+          .leadershiprow1 {
+            grid-template-columns: 33% 64%;
+          }
+
+          .leadershiprow2 {
+            grid-template-columns: 64% 33%;
+          }
+          .leadershippic {
+            width: 30vw;
+            margin-left: 0vw;
+            margin-top: 40%;
+          }
+          .leadershipheader {
+            font-size: 4vw;
+          }
+
+          .leadershiptitle {
+            font-size: 4vw;
+          }
+
+          .leadershipcontent {
+            font-size: 4vw;
+          }
+          .footer {
+            font-size: 3vw;
+            padding: 2vw;
+            line-height: 5vw;
+          }
+          .mySwiper{
+            width: 95vw;
+          }
+        }
+
+      @font-face{font-family:swiper-icons;src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');font-weight:400;font-style:normal}:root{--swiper-theme-color:#007aff}:host{position:relative;display:block;margin-left:auto;margin-right:auto;z-index:1}.swiper{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1;display:block}.swiper-vertical>.swiper-wrapper{flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);box-sizing:content-box}.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper{transform:translate3d(0px,0,0)}.swiper-horizontal{touch-action:pan-y}.swiper-vertical{touch-action:pan-x}.swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform;display:block}.swiper-slide-invisible-blank{visibility:hidden}.swiper-autoheight,.swiper-autoheight .swiper-slide{height:auto}.swiper-autoheight .swiper-wrapper{align-items:flex-start;transition-property:transform,height}.swiper-backface-hidden .swiper-slide{transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-3d.swiper-css-mode .swiper-wrapper{perspective:1200px}.swiper-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-3d{perspective:1200px}.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide{transform-style:preserve-3d}.swiper-css-mode>.swiper-wrapper{overflow:auto;scrollbar-width:none;-ms-overflow-style:none}.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{display:none}.swiper-css-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:start start}.swiper-css-mode.swiper-horizontal>.swiper-wrapper{scroll-snap-type:x mandatory}.swiper-css-mode.swiper-vertical>.swiper-wrapper{scroll-snap-type:y mandatory}.swiper-css-mode.swiper-free-mode>.swiper-wrapper{scroll-snap-type:none}.swiper-css-mode.swiper-free-mode>.swiper-wrapper>.swiper-slide{scroll-snap-align:none}.swiper-css-mode.swiper-centered>.swiper-wrapper::before{content:'';flex-shrink:0;order:9999}.swiper-css-mode.swiper-centered>.swiper-wrapper>.swiper-slide{scroll-snap-align:center center;scroll-snap-stop:always}.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{margin-inline-start:var(--swiper-centered-offset-before)}.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper::before{height:100%;min-height:1px;width:var(--swiper-centered-offset-after)}.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{margin-block-start:var(--swiper-centered-offset-before)}.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper::before{width:100%;min-width:1px;height:var(--swiper-centered-offset-after)}.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-3d .swiper-slide-shadow{background:rgba(0,0,0,.15)}.swiper-3d .swiper-slide-shadow-left{background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-right{background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-top{background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;box-sizing:border-box;border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));border-radius:50%;border-top-color:transparent}.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader{animation:swiper-preloader-spin 1s infinite linear}.swiper-lazy-preloader-white{--swiper-preloader-color:#fff}.swiper-lazy-preloader-black{--swiper-preloader-color:#fff}@keyframes swiper-preloader-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.swiper-virtual .swiper-slide{-webkit-backface-visibility:hidden;transform:translateZ(0)}.swiper-virtual.swiper-css-mode .swiper-wrapper::after{content:'';position:absolute;left:0;top:0;pointer-events:none}.swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after{height:1px;width:var(--swiper-virtual-size)}.swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after{width:1px;height:var(--swiper-virtual-size)}:root{--swiper-navigation-size:44px}.swiper-button-next,.swiper-button-prev{position:absolute;top:var(--swiper-navigation-top-offset,50%);width:calc(var(--swiper-navigation-size)/ 44 * 27);height:var(--swiper-navigation-size);margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));z-index:10;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--swiper-navigation-color,var(--swiper-theme-color))}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-next.swiper-button-hidden,.swiper-button-prev.swiper-button-hidden{opacity:0;cursor:auto;pointer-events:none}.swiper-navigation-disabled .swiper-button-next,.swiper-navigation-disabled .swiper-button-prev{display:none!important}.swiper-button-next svg,.swiper-button-prev svg{width:100%;height:100%;object-fit:contain;transform-origin:center}.swiper-rtl .swiper-button-next svg,.swiper-rtl .swiper-button-prev svg{transform:rotate(180deg)}.swiper-button-prev,.swiper-rtl .swiper-button-next{left:var(--swiper-navigation-sides-offset,10px);right:auto}.swiper-button-next,.swiper-rtl .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.swiper-button-lock{display:none}.swiper-button-next:after,.swiper-button-prev:after{font-family:swiper-icons;font-size:var(--swiper-navigation-size);text-transform:none!important;letter-spacing:0;font-variant:initial;line-height:1}.swiper-button-prev:after,.swiper-rtl .swiper-button-next:after{content:'prev'}.swiper-button-next,.swiper-rtl .swiper-button-prev{right:var(--swiper-navigation-sides-offset,10px);left:auto}.swiper-button-next:after,.swiper-rtl .swiper-button-prev:after{content:'next'}.swiper-pagination{position:absolute;text-align:center;transition:.3s opacity;transform:translate3d(0,0,0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-pagination-disabled>.swiper-pagination,.swiper-pagination.swiper-pagination-disabled{display:none!important}.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:var(--swiper-pagination-bottom,12px);top:var(--swiper-pagination-top,auto);left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,12px));height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,12px));display:inline-block;border-radius:var(--swiper-pagination-bullet-border-radius,50%);background:var(--swiper-pagination-bullet-inactive-color,rgb(255, 255, 255));opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet:only-child{display:none!important}.swiper-pagination-bullet-active{opacity:var(--swiper-pagination-bullet-opacity, 1);background:var(--swiper-pagination-color,var(--swiper-theme-color))}.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{right:var(--swiper-pagination-right,12px);left:var(--swiper-pagination-left,auto);top:50%;transform:translate3d(0px,-50%,0)}.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;display:block}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:12px}.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:.2s transform,.2s top}.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s left}.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:.2s transform,.2s right}.swiper-pagination-fraction{color:var(--swiper-pagination-fraction-color,inherit)}.swiper-pagination-progressbar{background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:var(--swiper-pagination-color,var(--swiper-theme-color));position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:var(--swiper-pagination-progressbar-size,4px);left:0;top:0}.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-vertical,.swiper-vertical>.swiper-pagination-progressbar{width:var(--swiper-pagination-progressbar-size,4px);height:100%;left:0;top:0}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:var(--swiper-scrollbar-border-radius,10px);position:relative;touch-action:none;background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))}.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled{display:none!important}.swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal{position:absolute;left:var(--swiper-scrollbar-sides-offset,1%);bottom:var(--swiper-scrollbar-bottom,4px);top:var(--swiper-scrollbar-top,auto);z-index:50;height:var(--swiper-scrollbar-size,4px);width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar.swiper-scrollbar-vertical,.swiper-vertical>.swiper-scrollbar{position:absolute;left:var(--swiper-scrollbar-left,auto);right:var(--swiper-scrollbar-right,4px);top:var(--swiper-scrollbar-sides-offset,1%);z-index:50;width:var(--swiper-scrollbar-size,4px);height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));border-radius:var(--swiper-scrollbar-border-radius,10px);left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:flex;justify-content:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;object-fit:contain}.swiper-slide-zoomed{cursor:move;touch-action:none}.swiper .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.swiper-grid>.swiper-wrapper{flex-wrap:wrap}.swiper-grid-column>.swiper-wrapper{flex-wrap:wrap;flex-direction:column}.swiper-fade.swiper-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-fade .swiper-slide-active{pointer-events:auto}.swiper-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube{overflow:visible}.swiper-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-cube.swiper-rtl .swiper-slide{transform-origin:100% 0}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-next,.swiper-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0px;width:100%;height:100%;opacity:.6;z-index:0}.swiper-cube .swiper-cube-shadow:before{content:'';background:rgb(255, 255, 255);position:absolute;left:0;top:0;bottom:0;right:0;filter:blur(50px)}.swiper-cube .swiper-slide-next+.swiper-slide{pointer-events:auto;visibility:visible}.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-bottom,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-left,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-right,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-flip{overflow:visible}.swiper-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-creative .swiper-slide{-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;transition-property:transform,opacity,height}.swiper-cards{overflow:visible}.swiper-cards .swiper-slide{transform-origin:center bottom;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden}
 
     </style>
     <body>
@@ -64,5 +970,321 @@
           <a href="/film/">Film</a>
           <a class="active" href="/both/">Both</a>
         </div>
+        <div class="aboutmegrid">
+          <div class="aboutmeleft"> 
+            <div class="aboutmeheader">
+              About Me.
+            </div>
+            <div class="aboutmetext">
+              Hello! My name is Kyle Coon and I'm a programmer, video editor, and filmmaker from Michigan with a dual degree in Computer Science and Film. 
+            </div>
+            <a href="/images/phone.webp" class="resumebutton" target="_blank">View Resume</a>
+          </div>
+          <div class="aboutmeright">
+            <div class="aboutmecover"></div>
+          </div>
+        </div>
+        <div class="educationgrid">
+          <div class="educationleft" id="educationleft">
+            <img class="uofm" src="/images/uofm.webp" alt="michigan">
+            <div>
+              <div class="educationheader">Education</div>
+              <div><img class="educationline" src="/images/line.webp" alt="line"></div>
+              <div class="educationinfo">
+                <b>School:</b> University of Michigan -<br> 
+                College of Literature, Science,<br>
+                and the Arts<br><br>
+
+                <b>Graduation</b> May 2024<br><br>
+
+                <b>GPA:</b> 3.651<br><br>
+
+                <b>Degrees:</b> B.S. Computer Science, B.S. Film, Television, and Media<br><br>
+              </div>
+            </div>
+            <div class="skills">
+              <div class="skillsheader">C.S. Skills</div>
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/images/soft.webp" alt="software" class="skillssection">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/webdevel.webp" alt="webdev" class="skillssection">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/images/comsec.webp" alt="compsec" class="skillssection">
+                    </div>
+                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+              <script>
+                var swiper = new Swiper(".mySwiper", {
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                  },
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
+            </div>
+            <div></div>
+            <div class="awards">
+              <div class="awardsheader">Film Awards</div>
+              <div class="awardssection">
+                Best Documentary Runner Up<br>
+                <div class="awardee">Lightworks Film Festival</div>
+                <br>
+                Best of Festival<br>
+                <div class="awardee">F.T.V.M. 150</div>
+              </div>
+            </div>
+          </div>
+          <div class="educationright" id="educationright">
+            <div class="classesheader1"> Notable <img class="classesline" src="/images/line.webp" alt="line"></div>
+            <div class="classesheader2"> Classes </div>
+            <div class="sticky1"><u>Editing Theory and Practice:</u> Comprehensive overview of non-linear<br>&nbsp;film and video editing &nbsp;&nbsp;through the creation of<br>&nbsp;&nbsp;&nbsp;&nbsp;six projects of varying<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styles.</div>
+            <div class="sticky6"><u>Web Systems:</u> Practical <br> implementations of both <br>front-end and back-<br>&nbsp;end web systems and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;technologies</div>
+            <div class="sticky7">&nbsp;&nbsp;&nbsp;&nbsp;<u>Computer Security:</u><br>&nbsp;&nbsp;&nbsp;Assessement, prevention,<br>&nbsp;&nbsp;&nbsp;and exploitation of<br>&nbsp;&nbsp;&nbsp;modern web security<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;designs and their<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;faults</div>
+            <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Documentary Prod.:</u><br>&nbsp;&nbsp;&nbsp;&nbsp;Understanding of<br>&nbsp;&nbsp;&nbsp;&nbsp;modern documentary &nbsp;&nbsp;&nbsp;&nbsp;techniques through the &nbsp;&nbsp;&nbsp;&nbsp;development and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creation of two non-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fictional narrative<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;short films.</div>
+            <div class="sticky3">&nbsp;&nbsp;<u>Movie/TV Production:</u> &nbsp;&nbsp;<br>&nbsp;All encompassing<br>&nbsp;independent creation of<br>&nbsp;multiple forms of<br>&nbsp;narrative driven fiction<br>&nbsp;&nbsp;including film and TV. </div>
+            <div class="sticky8">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of &nbsp;machine learning and<br>&nbsp;&nbsp;deep learning</div>
+            <div class="sticky10"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computer games as well<br>&nbsp;&nbsp;as understanding of the<br>&nbsp;&nbsp;video game industry<br>&nbsp;<i>*Currently Enrolled</i></div>
+            <div class="sticky4">&nbsp;&nbsp;&nbsp;&nbsp;<u>Classical Film<br></u>&nbsp;&nbsp;&nbsp;&nbsp;<u>Theory:</u> Study and<br>&nbsp;&nbsp;&nbsp;&nbsp;analysis of the<br>&nbsp;&nbsp;&nbsp;&nbsp;definitions of cinema<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rooted in its classical<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;era.</div>
+            <div class="sticky5"><u>Culture in Video Games</u> Rhetorical analysis of the role of race, gender, and<br>&nbsp;sexuality in US video<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;games.</div>
+            <div class="sticky9"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br>&nbsp;<i>*Currently Enrolled</i></div>
+          </div>
+        </div>
+        <div class="projects">
+          Film and Computer Science Projects
+          <div class="filmgrid">
+            <!--FED UP-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Fed Up<br>
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/AAfVXC3M2RQ?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, Writer, Producer, CamOp</div>
+                <div class="filmsummary">Documentary shortfilm made in collaboration with Fed Up ministries in November 2023.</div>
+              </div>
+            </div>
+            <!--CHESS DIGITIZER-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <video class="film" autoplay muted controls loop><source src="/images/chess.mp4" type="video/mp4"></video>
+                <div class="projectsummary"><i>Conversion of image to digital representation</i></div>
+                <div class="projectcontent">
+                  Computer vision project that digitizes the layout of a real chess board to be analyzed or played on <a href="lichess.com" style="color:inherit;">lichess.com</a>. This was achieved with a corner-recognition algorithm and neural network written in Python.
+                  <br>
+                  <br>
+                  <a href="/images/ChessReport.pdf" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content;margin-right:0.5vw;"><div class="codebutton">View Report</div></a>
+                  <a href="https://github.com/kylecoon/chess" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content;margin-left:0.5vw;"><div class="codebutton">View Code</div></a>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                Chess Digitizer<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--HARDLY WORKING-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Hardly Working<br>
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/Zocfea8HJhI?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, Writer</div>
+                <div class="filmsummary">Personal documentary project independently made in October 2023.</div>
+              </div>
+            </div>
+            <!--TERMINLE-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <video class="film" autoplay muted controls loop><source src="/images/terminle.mp4" type="video/mp4"></video>
+                <div class="projectsummary"><i>Gameplay with randomly generated word</i></div>
+                <div class="projectcontent">
+                  Recreation of the popular <a href="https://www.nytimes.com/games/wordle/index.html" style="color:inherit;">New York Times</a> web-based word game "Wordle" that can be played locally in a computer terminal with two gameplay options. The program was written in C++ with a text-coloring library. 
+                  <br>
+                  <br>
+                  <a href="https://github.com/kylecoon/terminle" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content"><div class="codebutton">View Code</div></a>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                Terminle<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--HAND TO HAND-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Hand to Hand<br>
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/vGSmTbyb9JI?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, Writer, Producer, Dir. of Photography, CamOp</div>
+                <div class="filmsummary">Collaborative short film made at the University of Michigan in the Fall of 2022.</div>
+              </div>
+            </div>
+            <!--CRUD-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <video class="film" autoplay muted controls loop><source src="/images/kylestagram.mp4" type="video/mp4"></video>
+                <div class="projectsummary"><i>Account creation and content browsing</i></div>
+                <div class="projectcontent">
+                  Clone of an Instagram-like Create, Read, Update, and Delete social media website. Includes security-conscious account creation, home feed, explore page, followers, likes, and comments. Created with HTML, CSS, JavaScript, React, and SQL framework that prioritizes functionality over aesthetics.
+                  <br>
+                  <br>
+                  <div style="color:#FFCB05">Code available upon request.</div>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                C.R.U.D. Website<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--BFC-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Best Friends Channel<br>
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/AjlQ9q5R9V4?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, Writer, CamOp</div>
+                <div class="filmsummary">Improvised comedic video short concieved, shot, and edited in 72 hours in the Spring of 2022.</div>
+              </div>
+            </div>
+            <!--CRUD-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <video class="film" autoplay muted controls loop><source src="/images/bingle.mp4" type="video/mp4"></video>
+                <div class="projectsummary"><i>Search query and results</i></div>
+                <div class="projectcontent">
+                  Search engine similar to Google/Bing that ranks page results with an inverted index that was constructed by web-crawling about 3,000 webpages. The inverted index was made with a MapReduce program written in Python and the website was constructed with standard web app framework.
+                  <br>
+                  <br>
+                  <div style="color:#FFCB05">Code available upon request.</div>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                Scalable Search Engine<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--BFC2-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Best Friends Channel 2
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/Z8JW7stAa78?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, Writer, CamOp</div>
+                <div class="filmsummary">Sequel and expansion to "Best Friends Channel" made in 5 days in the Spring of 2023.</div>
+              </div>
+            </div>
+            <!--DISTRIBUTED-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <video class="film" autoplay muted controls loop><source src="/images/word.mp4" type="video/mp4"></video>
+                <div class="projectsummary"><i>Partitioned output after execution on 8 documents</i></div>
+                <div class="projectcontent">
+                  Distributed system created to execute a simple word count Map Reduce program with one manager and a variable amount of workers. The distributed system utilizes heartbeat tracking between workers and a manager to ensure accuracy through a fault-tolerant design. 
+                  <br>
+                  <br>
+                  <div style="color:#FFCB05">Code available upon request.</div>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                Distributed MapReduce<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--MOOSE BANQUET-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                Moose Banquet<br>
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/zJdjU5QZed4?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor, CamOp</div>
+                <div class="filmsummary">End-of-summer compilation made as videographer for Camp Moosilauke in the Summer of 2023.</div>
+              </div>
+            </div>
+            <!--WEBSITE-->
+            <div class="filmrow2">
+              <div class="projectitem">
+                <img src="/images/website.webp" class="film" alt="website">
+                <div class="projectsummary"><i>Landing page for this website</i></div>
+                <div class="projectcontent">
+                  Instead of using a website builder, this entire website was hand-written. This was my first aesthetics-first, and while there's room for improvement, I was able to learn many important principals of responsive web design.
+                  <br>
+                  <br>
+                  <a href="https://github.com/kylecoon/kylecoon.github.io" target="_blank" style="text-decoration:none;display:inline-block;width:fit-content"><div class="codebutton">View Code</div></a>
+                </div>
+              </div>
+              <div class="filmtitle" style="padding-top:18vw">
+                This Website!<br>
+                <img src="/images/circles.webp" class="lines">
+              </div>
+            </div>
+            <!--IT'S NOT EASY BEING BIG-->
+            <div class="filmrow1">
+              <div class="filmtitle">
+                It's Not Easy Being Big
+                <img src="/images/lines.webp" class="lines">
+              </div>
+              <div class="filmitem">
+                <iframe src="https://www.youtube.com/embed/_kM0ZpLg1w8?controls=1" class="film" allowfullscreen></iframe>
+                <div class="filmroles">Roles: Editor</div>
+                <div class="filmsummary">Comedic found footage project made for<br>FTVM 391 at UofM in the Fall of 2023.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="leadership">
+          Leadership Experience
+          <div class="leadershiprows">
+            <div class="leadershiprow1">
+              <img src="/images/glee.webp" class="leadershippic" alt="glee">
+              <div>
+                <div class="leadershipheader">U of M Men's Glee Club</div>
+                <div class="leadershiptitle"><i>Vice President</i></div>
+                <div class="leadershipcontent">Head of social team for the second oldest collegiate choir in the country. Responsibilities include organizing all social events for a 100+ person organization, leading orientation for new members, and tracking attendance.</div>
+              </div>
+            </div>
+            <div class="leadershiprow2">
+              <div>
+                <div class="leadershipheader">The Friars</div>
+                <div class="leadershiptitle"><i>President</i></div>
+                <div class="leadershipcontent">Leader of the oldest acappella group on the University of Michigan campus. Responsibilities include scheduling concerts and gigs, coordinating collaborations, and arranging vocal scores.  </div>
+              </div>
+              <img src="/images/friar.webp" class="leadershippic" alt="friars">
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          2023 by Kyle J. Coon<br>
+          kylecoon@umich.edu<br>
+          616&#x2022;843&#x2022;5946
+        </div>
+      </div>
     </body>
 </html>
