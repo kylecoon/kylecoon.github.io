@@ -23,7 +23,7 @@
         overflow: hidden;
         width: 100%;
         display: grid;
-        grid-template-columns: 270px 90px 90px;
+        grid-template-columns: max-content max-content max-content;
         text-align: center;
       }
 
@@ -33,7 +33,7 @@
         text-align: center;
         padding: 0.6vw 0.8vw;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 2vw;
         font-family: 'Gill Sans';
         transition: 0.2s;
       }
@@ -67,6 +67,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-grid;
+        left: 5vw;
       }
 
       .aboutmeheader {
@@ -612,11 +613,8 @@
         }
       
         @media (max-width: 45em) {
-          .topnav {
-            grid-template-columns: 176px 50px 50px;
-          }
           .topnav a {
-            font-size: 20px;
+            font-size: 4vw;
             padding: 2vw;
           }
           .aboutmeheader {
@@ -629,6 +627,9 @@
           .aboutmegrid {
             grid-template-columns: 1.2fr 1fr;
             grid-template-rows: 50vw;
+          }
+          .aboutmeright {
+            background-image: url('/images/me3_1.webp');
           }
           .resumebutton {
             width: 20vw;
@@ -813,7 +814,7 @@
           }
 
           .awardssection {
-            padding-top: 3vw;
+            padding-top: 0vw;
             font-size: 5vw;
             width: 100vw
           }
@@ -1058,17 +1059,17 @@
             <div class="sticky1"><u>Editing Theory and Practice:</u> Comprehensive overview of non-linear<br>&nbsp;film and video editing &nbsp;&nbsp;through the creation of<br>&nbsp;&nbsp;&nbsp;&nbsp;six projects of varying<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;styles.</div>
             <div class="sticky6"><u>Web Systems:</u> Practical <br> implementations of both <br>front-end and back-<br>&nbsp;end web systems and <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;technologies</div>
             <div class="sticky7">&nbsp;&nbsp;&nbsp;&nbsp;<u>Computer Security:</u><br>&nbsp;&nbsp;&nbsp;Assessement, prevention,<br>&nbsp;&nbsp;&nbsp;and exploitation of<br>&nbsp;&nbsp;&nbsp;modern web security<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;designs and their<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;faults</div>
-            <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Documentary Prod.:</u><br>&nbsp;&nbsp;&nbsp;&nbsp;Understanding of<br>&nbsp;&nbsp;&nbsp;&nbsp;modern documentary &nbsp;&nbsp;&nbsp;&nbsp;techniques through the &nbsp;&nbsp;&nbsp;&nbsp;development and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creation of two non-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fictional narrative<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;short films.</div>
+            <div class="sticky2">&nbsp;&nbsp;&nbsp;&nbsp;<u>Documentary Prod.:</u><br>&nbsp;&nbsp;&nbsp;&nbsp;Understanding of<br>&nbsp;&nbsp;&nbsp;&nbsp;modern documentary &nbsp;&nbsp;&nbsp;&nbsp;techniques through the &nbsp;&nbsp;&nbsp;&nbsp;development and<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;creation of two non-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fictional narrative<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;short films.</div>
             <div class="sticky3">&nbsp;&nbsp;<u>Movie/TV Production:</u> &nbsp;&nbsp;<br>&nbsp;All encompassing<br>&nbsp;independent creation of<br>&nbsp;multiple forms of<br>&nbsp;narrative driven fiction<br>&nbsp;&nbsp;including film and TV. </div>
             <div class="sticky8">&nbsp;<u>Computer Vision:</u> &nbsp;&nbsp;<br>&nbsp;Solving of visual<br>&nbsp;problems with the use of computers by means of &nbsp;machine learning and<br>&nbsp;&nbsp;deep learning</div>
             <div class="sticky10"> &nbsp;&nbsp;<u>Computer Game</u><br>&nbsp;&nbsp;<u>Development*:</u> Design<br>&nbsp;&nbsp;and development of<br>&nbsp;&nbsp;several Unity-made <br>&nbsp;&nbsp;computer games as well<br>&nbsp;&nbsp;as understanding of the<br>&nbsp;&nbsp;video game industry<br>&nbsp;<i>*Currently Enrolled</i></div>
-            <div class="sticky4">&nbsp;&nbsp;&nbsp;&nbsp;<u>Classical Film<br></u>&nbsp;&nbsp;&nbsp;&nbsp;<u>Theory:</u> Study and<br>&nbsp;&nbsp;&nbsp;&nbsp;analysis of the<br>&nbsp;&nbsp;&nbsp;&nbsp;definitions of cinema<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rooted in its classical<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;era.</div>
-            <div class="sticky5"><u>Culture in Video Games</u> Rhetorical analysis of the role of race, gender, and<br>&nbsp;sexuality in US video<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;games.</div>
+            <div class="sticky4">&nbsp;&nbsp;&nbsp;&nbsp;<u>Classical Film<br></u>&nbsp;&nbsp;&nbsp;&nbsp;<u>Theory:</u> Study and<br>&nbsp;&nbsp;&nbsp;&nbsp;analysis of the<br>&nbsp;&nbsp;&nbsp;&nbsp;definitions of cinema<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rooted in its classical<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;era.</div>
+            <div class="sticky5"><u>Culture in Video Games</u> Rhetorical analysis of the role of race, gender, and<br>&nbsp;sexuality in US video<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;games.</div>
             <div class="sticky9"> &nbsp;<u>UI Development*:</u> Concepts<br>&nbsp;and techniques for<br>&nbsp;designing computer<br>&nbsp;system user interfaces to <br>&nbsp;be user-friendly. I'm sure <br>&nbsp;in hindsight this website <br>&nbsp;will haunt me<br>&nbsp;<i>*Currently Enrolled</i></div>
           </div>
         </div>
         <div class="projects">
-          Film and Computer Science Projects
+          Projects
           <div class="filmgrid">
             <!--FED UP-->
             <div class="filmrow1">

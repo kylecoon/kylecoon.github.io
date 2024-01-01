@@ -23,7 +23,7 @@
         overflow: hidden;
         width: 100%;
         display: grid;
-        grid-template-columns: 270px 90px 90px;
+        grid-template-columns: max-content max-content max-content;
         text-align: center;
       }
 
@@ -33,7 +33,7 @@
         text-align: center;
         padding: 0.6vw 0.8vw;
         text-decoration: none;
-        font-size: 30px;
+        font-size: 2vw;
         font-family: 'Gill Sans';
         transition: 0.2s;
       }
@@ -433,11 +433,8 @@
         }
       
         @media (max-width: 45em) {
-          .topnav {
-            grid-template-columns: 176px 50px 50px;
-          }
           .topnav a {
-            font-size: 20px;
+            font-size: 4vw;
             padding: 2vw;
           }
           .aboutmeheader {
